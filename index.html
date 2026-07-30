@@ -6,7 +6,7 @@
     <meta name="description" content="Appleギフトカード買取専門店 即日アリアちゃん" />
     <title>即日アリアちゃん</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="figma-nodes.css?v=news-two-19" />
+    <link rel="stylesheet" href="figma-nodes.css?v=edge-flush-20" />
   </head>
   <body>
     <div class="site-shell">
@@ -142,11 +142,12 @@
         const scale = Math.min(1, window.innerWidth / 393);
         shell.style.transform = `scale(${scale})`;
         shell.style.transformOrigin = 'top left';
-        document.body.style.height = `${shell.scrollHeight * scale}px`;
+        document.body.style.height = scale < 1 ? `${shell.scrollHeight * scale}px` : 'auto';
       };
       fitFigmaCanvas();
       window.addEventListener('resize', fitFigmaCanvas);
+      new ResizeObserver(fitFigmaCanvas).observe(document.querySelector('.site-shell'));
     </script>
-    <script src="real-sections.js?v=news-two-19"></script>
+    <script src="real-sections.js?v=edge-flush-20"></script>
   </body>
 </html>
