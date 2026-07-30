@@ -237,6 +237,27 @@
 .hero>.current-rate .current-rate__grid>div:first-child small{left:60px!important}
 .hero>.hero__speed>.hero__stopwatch{left:28.164px!important}
 
+/* Updated FV proof strip for Figma node 577:51007. */
+.hero.hero{height:576px!important;min-height:576px!important}
+.hero>.hero__proof{left:21px!important;top:496px!important;width:352px!important;height:65px!important;opacity:1!important}
+.hero__proof:before,.hero__proof:after{content:"";position:absolute;z-index:3;top:0;width:2px;height:65px;background:#372200}
+.hero__proof:before{left:83px}.hero__proof:after{left:227px}
+.hero__proof>.proof{top:0!important;height:65px!important;border:0!important;background:none!important;box-shadow:none!important}
+.hero__proof>.proof--fee{left:0!important;width:70px!important}
+.hero__proof>.proof--users{left:98px!important;width:116px!important}
+.hero__proof>.proof--license{left:242px!important;width:110px!important}
+.hero__proof>.proof>.proof__diamond{display:none!important}
+.hero__proof>.proof>small,.hero__proof>.proof>strong,.hero__proof>.proof>b{color:#000!important;transform:none!important}
+.hero__proof>.proof--fee>small{left:0!important;top:7.5px!important;width:70px!important;height:17px!important;font-size:14px!important;font-weight:500!important;line-height:normal!important}
+.hero__proof>.proof--fee>strong{left:3.029px!important;top:24.5px!important;width:54px!important;height:33px!important;background:none!important;color:#000!important;font-size:22.629px!important;font-weight:800!important;line-height:.918!important;letter-spacing:-2.263px!important;text-shadow:none!important}
+.hero__proof>.proof--fee>strong>i{font-size:35.829px!important;font-style:normal!important;font-weight:800!important;letter-spacing:-4.658px!important}
+.hero__proof>.proof--users>small{left:14px!important;top:5.936px!important;width:84px!important;height:17px!important;font-size:14px!important;font-weight:500!important;line-height:normal!important}
+.hero__proof>.proof--users>strong{left:0!important;top:19.064px!important;width:88px!important;height:40px!important;background:linear-gradient(97.861deg,#f5a623 3.672%,#ff8800 96.328%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;font-size:0!important;font-weight:800!important;line-height:39.403px!important;text-shadow:1.26px 1.26px 0 #000!important}
+.hero__proof>.proof--users>strong>i{font-size:36.776px!important;font-style:normal!important;font-weight:800!important}.hero__proof>.proof--users>strong>span{font-size:31.522px!important;font-weight:800!important}
+.hero__proof>.proof--users>b{left:88px!important;top:41.936px!important;width:28px!important;height:14px!important;font-size:12px!important;font-weight:700!important;line-height:14px!important}
+.hero__proof>.proof--license>strong{left:0!important;top:10.5px!important;width:110px!important;height:27px!important;font-size:22px!important;font-weight:700!important;line-height:normal!important}
+.hero__proof>.proof--license>b{left:22px!important;top:37.5px!important;width:66px!important;height:17px!important;font-size:14px!important;font-weight:500!important;line-height:normal!important}
+
 /* Pixel-perfect estimator for Figma node 392:52780. */
 .estimator--figma.estimator--figma{height:810px!important;min-height:810px!important;background:linear-gradient(180deg,#fff8ea 0%,#fcfcfc 6.2%,#cef0ff 100%)!important}
 .estimator--figma:before,.estimator--figma:after{width:210px!important;height:420px!important;background:url("asset-halftone-bottom.png") center/210px 420px no-repeat!important;opacity:.72!important;mask-image:none!important}
