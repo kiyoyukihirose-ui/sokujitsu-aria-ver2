@@ -6,7 +6,7 @@
   };
 
   const estimator = replace('[data-node-id="392:52780"]', `
-    <div class="dot-field dot-field--left"></div>
+    <p class="estimator-license">※東京都公安委員会 第304362115284号</p>
     <div class="estimate-panel">
       <h2>見積もり計算</h2>
       <label class="estimate-input"><input id="amount" inputmode="numeric" value="5,000" aria-label="Appleギフトカード額面"><span>円分</span></label>
