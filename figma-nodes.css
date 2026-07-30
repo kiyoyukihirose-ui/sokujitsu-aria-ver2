@@ -315,3 +315,10 @@
 .feature--figma-fee>.fee-glow{position:absolute!important;z-index:1!important;left:49px!important;top:140px!important;width:292px!important;height:123px!important;overflow:visible!important;pointer-events:none!important}
 .feature--figma-fee>.fee-glow>img{position:absolute!important;left:-135px!important;top:-135px!important;width:562px!important;height:393px!important;max-width:none!important}
 .feature--figma-fee:after{content:none!important;display:none!important}
+
+/* Transparent 0-yen artwork reconstructed from Figma node 529:21802. */
+.feature--figma-fee>.fee-zero-art{position:absolute!important;z-index:2!important;left:0!important;top:0!important;width:393px!important;height:400px!important;margin:0!important;padding:0!important;overflow:visible!important;background:transparent!important;filter:none!important;pointer-events:none!important}
+.fee-zero-art>.fee-zero-bar{position:absolute;z-index:0;left:74px;top:256.83px;width:244.659px;height:26.997px;box-sizing:border-box;border:.562px solid #fffcf8;background:#f80;box-shadow:0 0 2.25px rgba(0,0,0,.5)}
+.fee-zero-art>.fee-zero-yen{position:absolute;z-index:1;left:208.23px;top:161.27px;width:93.749px;height:112.091px;max-width:none}
+.fee-zero-art>strong{position:absolute;z-index:1;left:147.37px;top:99px;display:block;width:auto;height:188.96px;margin:0;padding:0;transform:translateX(-50%);background:linear-gradient(92.51deg,#f5a623 3.672%,#ffc43a 96.328%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-family:Inter,sans-serif;font-size:190.869px;font-weight:700;line-height:188.96px;text-align:center;white-space:nowrap;-webkit-text-stroke:5.095px #fffcf8;paint-order:stroke fill;filter:drop-shadow(0 0 2.038px rgba(0,0,0,.5))}
+.feature--figma-fee>.fee-band>p>strong{text-align:center!important}
