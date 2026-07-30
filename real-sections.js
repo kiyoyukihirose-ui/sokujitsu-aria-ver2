@@ -36,14 +36,16 @@
     </div>`);
 
   replace('[data-node-id="392:54873"]', `
-    <div class="arrow-heading"><small>即日アリアちゃんは</small><strong>振込までがとにかく速い！</strong></div>
-    <div class="speed-visual"><div class="speed-circle"><small>申込から振込まで、</small><strong>最短<em>3</em>分</strong></div><img src="asset-speed-aria.png" alt="案内するアリアちゃん"></div>
-    <div class="speed-description"><p>Appleギフトカード専門の買取だからこそ<br>実現できるスピードで、<br>待ち時間の不安や急な出費に応えます。</p><small>※繁忙期などお申込みが集中した場合は、<br>入金までお時間をいただく場合がございます。</small></div>`);
+    <div class="speed-band"><img src="asset-speed-title-band.png" alt=""><p><small>即日アリアちゃんは</small><strong>振込までがとにかく速い！</strong></p></div>
+    <div class="speed-badge"><img src="asset-speed-badge-bg.png" alt=""><p><small>申込から振込まで、</small><strong>最短<em>3</em>分</strong></p></div>
+    <img class="speed-aria" src="asset-speed-aria.png" alt="案内するアリアちゃん">
+    <div class="speed-copy"><p>Appleギフトカード専門の買取だからこそ<br>実現できるスピードで、<br>待ち時間の不安や急な出費に応えます。</p><small>※繁忙期などお申込みが集中した場合は、<br>入金までお時間をいただく場合がございます。</small></div>`);
 
   replace('[data-node-id="392:54905"]', `
-    <div class="arrow-heading"><small>買取率ピッタリで入金</small><strong>振込手数料0円</strong></div>
-    <div class="fee-zero"><strong>0</strong><span>円</span></div>
-    <p class="fee-copy"><strong>即日アリアちゃんなら、</strong><br>振込手数料・事務手数料0円。<br>買取率ピッタリでの振込をお約束します。</p>`);
+    <img class="fee-halftone" src="asset-fee-halftone-sp.png" alt="">
+    <div class="fee-band"><img src="asset-speed-title-band.png" alt=""><p><small>買取率ピッタリで入金</small><strong>振込手数料0円</strong></p></div>
+    <img class="fee-zero-art" src="asset-fee-zero.png" alt="0円">
+    <div class="fee-copy"><p><strong>即日アリアちゃんなら、</strong><br>振込手数料・事務手数料0円。<br>買取率ピッタリでの振込をお約束します。</p></div>`);
 
   const reasons = [
     ['▥','法人による運営','即日アリアちゃんは、株式会社Ariaが責任を持って運営するサービスです。'],
