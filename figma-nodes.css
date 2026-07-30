@@ -275,3 +275,10 @@
 .estimate-result--repeat>strong>small{background:linear-gradient(93.30612deg,#007ebd 4.7042%,#30b4f5 95.2958%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}
 .estimate-panel.is-pending .estimate-result>strong,.estimate-panel.is-pending .estimate-result>strong>small{background:none!important;color:#9ab3be!important;-webkit-text-fill-color:#9ab3be!important}
 .estimate-panel>.orange-cta{background:linear-gradient(104.46931deg,#f5a623 3.6719%,#ff8800 96.3281%)!important;box-shadow:2.53px 3.04px 0 #674000,inset 0 0 7.755px rgba(255,255,255,.6)!important;text-shadow:0 0 1.498px rgba(0,0,0,.25)!important}
+
+/* Exact decorative assets for Figma nodes 529:20724 and 529:20744. */
+.feature--figma-speed>.speed-band{overflow:visible!important}
+.feature--figma-speed>.speed-band>img{width:361px!important;height:91px!important;max-width:none!important;object-fit:fill!important}
+.feature--figma-speed>.speed-copy{z-index:1!important;overflow:visible!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;isolation:isolate!important}
+.feature--figma-speed>.speed-copy>.speed-copy-glow{position:absolute!important;z-index:0!important;left:-150px!important;top:-150px!important;width:630px!important;height:450px!important;max-width:none!important;pointer-events:none!important}
+.feature--figma-speed>.speed-copy>p,.feature--figma-speed>.speed-copy>small{position:relative!important;z-index:1!important}
