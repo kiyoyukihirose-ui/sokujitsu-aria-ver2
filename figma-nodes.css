@@ -369,6 +369,9 @@ body{overflow-x:hidden!important}
 .follow-cta-button--mypage{width:189.381px;height:59.503px;background:linear-gradient(101.625deg,#007ebd 4.7042%,#30b4f5 95.296%);box-shadow:1.62px 2.5px 0 #00425e,inset 0 0 8.922px #0075ae}
 .follow-cta-button--mypage strong{position:absolute;left:9px;top:11.75px;width:172px;font-family:Inter,"Noto Sans JP",sans-serif;font-size:15px;font-weight:800;line-height:18px;white-space:nowrap}
 
+/* Keep every company-table title aligned to the left edge of its cell. */
+.company-table>.company-row>dt{align-items:flex-start!important;text-align:left!important}
+
 /* Interactive CTA motion: lift without changing document layout. */
 .orange-cta,.flow-cta-exact,.repeat-mypage,.follow-cta-button{will-change:transform,filter;transform:translateY(0);filter:drop-shadow(0 0 0 rgba(0,0,0,0));transition:transform .22s ease,filter .22s ease}
 @media (hover:hover) and (pointer:fine){
