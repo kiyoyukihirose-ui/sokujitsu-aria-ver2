@@ -71,13 +71,14 @@
     ['ギフトコード・必要事項を<br>入力してお申し込み','figma-assets/flow-step-2.png','お手元にギフトコード及び、<br>顔付き身分証明証（免許証など）の<br>写真をご用意ください。'],
     ['ギフトコードの確認後、<br>お客様の口座に買取金を振込み','figma-assets/flow-step-3.png','お申込みから入金まで、最短3分で<br>完了します。※']
   ];
+  const stepBackgroundNodeIds = ['529:26977', '529:26985', '529:26993'];
   replace('[data-node-id="456:89585"]', `
     <img class="flow-dots flow-dots--1" src="asset-flow-halftone-sp-right-top.png" alt="">
     <img class="flow-dots flow-dots--2" src="asset-flow-halftone-sp-left-top.png" alt="">
     <img class="flow-dots flow-dots--3" src="asset-flow-halftone-sp-center-bottom.png" alt="">
     <img class="flow-dots flow-dots--4" src="asset-flow-halftone-sp-right-bottom.png" alt="">
     <div class="flow-band"><img src="figma-assets/flow-band-456-93716.png" alt=""><p><small>あっという間に振込完了！</small><strong>お申し込みの流れ</strong></p></div>
-    <div class="flow-cards">${steps.map(([title,img,body],i)=>`<article class="flow-card flow-card--${i+1}"><b class="flow-step">STEP<span>${i+1}</span></b><h3>${title}</h3><img class="flow-illustration" src="${img}" alt=""><p>${body}</p></article>`).join('')}</div>
+    <div class="flow-cards">${steps.map(([title,img,body],i)=>`<article class="flow-card flow-card--${i+1}"><b class="flow-step" data-node-id="${stepBackgroundNodeIds[i]}">STEP${['➊','➋','➌'][i]}</b><h3>${title}</h3><img class="flow-illustration" src="${img}" alt=""><p>${body}</p></article>`).join('')}</div>
     <p class="flow-note">※繁忙期などお申込みが集中した場合は、入金までお時間を<br>いただく場合がございます。</p>
     <a class="flow-cta-exact" href="#estimate"><img src="asset-cta-mobile-flow.png" alt="お申し込みはこちら"></a>`);
 
