@@ -80,6 +80,7 @@
     <div class="flow-band"><img src="figma-assets/flow-band-456-93716.png" alt=""><p><small>あっという間に振込完了！</small><strong>お申し込みの流れ</strong></p></div>
     <div class="flow-cards">${steps.map(([title,img,body],i)=>`<article class="flow-card flow-card--${i+1}"><b class="flow-step" data-node-id="${stepBackgroundNodeIds[i]}">STEP${['➊','➋','➌'][i]}</b><h3>${title}</h3><span class="flow-illustration"><img src="${img}" alt=""></span><p>${body}</p></article>`).join('')}</div>
     <p class="flow-note">※繁忙期などお申込みが集中した場合は、入金までお時間を<br>いただく場合がございます。</p>
+    <span class="flow-cta-glow" data-node-id="529:27016"><img src="figma-assets/flow-cta-glow-529-27016.svg" alt=""></span>
     <a class="flow-cta-exact" href="#estimate" data-node-id="529:27017"><span class="flow-cta-surface" data-node-id="529:27019"><img src="figma-assets/flow-cta-chevrons-529-27020.svg" alt=""><strong data-node-id="529:27027">お申し込みはこちら</strong></span></a>`);
 
   replace('[data-node-id="392:61195"]', `
