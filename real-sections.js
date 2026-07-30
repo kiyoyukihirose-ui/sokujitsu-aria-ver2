@@ -44,14 +44,14 @@
     </div>`);
 
   replace('[data-node-id="392:54873"]', `
-    <div class="speed-band" data-node-id="529:20724"><img src="figma-assets/speed-band-529-20724.png" alt=""><p><small>即日アリアちゃんは</small><strong>振込までがとにかく速い！</strong></p></div>
+    <div class="speed-band" data-node-id="529:20724"><img src="figma-assets/section-heading-band.svg" alt=""><p><small>即日アリアちゃんは</small><strong>振込までがとにかく速い！</strong></p></div>
     <div class="speed-badge"><img src="asset-speed-badge-bg.png" alt=""><p><small>申込から振込まで、</small><strong>最短<em>3</em>分</strong></p></div>
     <img class="speed-aria" src="asset-speed-aria.png" alt="案内するアリアちゃん">
     <div class="speed-copy" data-node-id="529:20744"><img class="speed-copy-glow" src="figma-assets/speed-copy-ellipse-529-20744.svg" alt=""><p>Appleギフトカード専門の買取だからこそ<br>実現できるスピードで、<br>待ち時間の不安や急な出費に応えます。</p><small>※繁忙期などお申込みが集中した場合は、<br>入金までお時間をいただく場合がございます。</small></div>`);
 
   replace('[data-node-id="392:54905"]', `
     <img class="fee-halftone" data-node-id="529:20756" src="figma-assets/fee-halftone-529-20756.png" alt="">
-    <div class="fee-band" data-node-id="529:21781"><img src="figma-assets/fee-band-529-21781.png" alt=""><p><small>買取率ピッタリで入金</small><strong>振込手数料0円</strong></p></div>
+    <div class="fee-band" data-node-id="529:21781"><img src="figma-assets/section-heading-band.svg" alt=""><p><small>買取率ピッタリで入金</small><strong>振込手数料0円</strong></p></div>
     <div class="fee-glow" data-node-id="529:21780"><img src="figma-assets/fee-copy-ellipse-529-21780.svg" alt=""></div>
     <div class="fee-zero-art" data-node-id="529:21802" aria-label="0円"><span class="fee-zero-bar" data-node-id="529:21803"></span><img class="fee-zero-yen" data-node-id="529:21804" src="figma-assets/fee-yen-529-21804.svg" alt=""><strong data-node-id="529:21805">0</strong></div>
     <div class="fee-copy"><p><strong>即日アリアちゃんなら、</strong><br>振込手数料・事務手数料0円。<br>買取率ピッタリでの振込をお約束します。</p></div>`);
@@ -63,7 +63,7 @@
   ];
   replace('[data-node-id="392:55956"]', `
     <img class="reason-halftone" src="asset-flow-halftone-sp-left-top.png" alt="">
-    <div class="reason-band"><img src="figma-assets/reason-band-392-56982.png" alt=""><p><small>はじめての方でも安心</small><strong>アリアちゃんが選ばれる理由</strong></p></div>
+    <div class="reason-band"><img src="figma-assets/section-heading-band.svg" alt=""><p><small>はじめての方でも安心</small><strong>アリアちゃんが選ばれる理由</strong></p></div>
     <div class="reason-cards">${reasons.map(([icon,title,body,note],i)=>`<article class="reason-card reason-card--${i+1}"><img class="reason-icon" src="${icon}" alt=""><div class="reason-text"><h3>${title}</h3><p>${body}</p>${note?`<small>${note}</small>`:''}</div></article>`).join('')}</div>`);
 
   const steps = [
@@ -77,7 +77,7 @@
     <img class="flow-dots flow-dots--2" src="asset-flow-halftone-sp-left-top.png" alt="">
     <img class="flow-dots flow-dots--3" src="asset-flow-halftone-sp-center-bottom.png" alt="">
     <img class="flow-dots flow-dots--4" src="asset-flow-halftone-sp-right-bottom.png" alt="">
-    <div class="flow-band"><img src="figma-assets/flow-band-456-93716.png" alt=""><p><small>あっという間に振込完了！</small><strong>お申し込みの流れ</strong></p></div>
+    <div class="flow-band"><img src="figma-assets/section-heading-band.svg" alt=""><p><small>あっという間に振込完了！</small><strong>お申し込みの流れ</strong></p></div>
     <div class="flow-cards">${steps.map(([title,img,body],i)=>`<article class="flow-card flow-card--${i+1}"><b class="flow-step" data-node-id="${stepBackgroundNodeIds[i]}">STEP${['➊','➋','➌'][i]}</b><h3>${title}</h3><span class="flow-illustration"><img src="${img}" alt=""></span><p>${body}</p></article>`).join('')}</div>
     <p class="flow-note">※繁忙期などお申込みが集中した場合は、入金までお時間を<br>いただく場合がございます。</p>
     <span class="flow-cta-glow" data-node-id="529:27016"><img src="figma-assets/flow-cta-glow-529-27016.svg" alt=""></span>
