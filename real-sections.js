@@ -67,9 +67,9 @@
     <div class="reason-cards">${reasons.map(([icon,title,body,note],i)=>`<article class="reason-card reason-card--${i+1}"><img class="reason-icon" src="${icon}" alt=""><div class="reason-text"><h3>${title}</h3><p>${body}</p>${note?`<small>${note}</small>`:''}</div></article>`).join('')}</div>`);
 
   const steps = [
-    ['ご自身で<br>Appleギフトカードを購入','figma-assets/flow-step-1.png','現物のカード・オンラインカードど<br>ちらでもご利用いただけます。'],
-    ['ギフトコード・必要事項を<br>入力してお申し込み','figma-assets/flow-step-2.png','お手元にギフトコード及び、<br>顔付き身分証明証（免許証など）の<br>写真をご用意ください。'],
-    ['ギフトコードの確認後、<br>お客様の口座に買取金を振込み','figma-assets/flow-step-3.png','お申込みから入金まで、最短3分で<br>完了します。※']
+    ['ご自身で<br>Appleギフトカードを購入','figma-assets/flow-sprite.png','現物のカード・オンラインカードど<br>ちらでもご利用いただけます。'],
+    ['ギフトコード・必要事項を<br>入力してお申し込み','figma-assets/flow-sprite.png','お手元にギフトコード及び、<br>顔付き身分証明証（免許証など）の<br>写真をご用意ください。'],
+    ['ギフトコードの確認後、<br>お客様の口座に買取金を振込み','figma-assets/flow-sprite.png','お申込みから入金まで、最短3分で<br>完了します。※']
   ];
   const stepBackgroundNodeIds = ['529:26977', '529:26985', '529:26993'];
   replace('[data-node-id="456:89585"]', `
@@ -78,7 +78,7 @@
     <img class="flow-dots flow-dots--3" src="asset-flow-halftone-sp-center-bottom.png" alt="">
     <img class="flow-dots flow-dots--4" src="asset-flow-halftone-sp-right-bottom.png" alt="">
     <div class="flow-band"><img src="figma-assets/flow-band-456-93716.png" alt=""><p><small>あっという間に振込完了！</small><strong>お申し込みの流れ</strong></p></div>
-    <div class="flow-cards">${steps.map(([title,img,body],i)=>`<article class="flow-card flow-card--${i+1}"><b class="flow-step" data-node-id="${stepBackgroundNodeIds[i]}">STEP${['➊','➋','➌'][i]}</b><h3>${title}</h3><img class="flow-illustration" src="${img}" alt=""><p>${body}</p></article>`).join('')}</div>
+    <div class="flow-cards">${steps.map(([title,img,body],i)=>`<article class="flow-card flow-card--${i+1}"><b class="flow-step" data-node-id="${stepBackgroundNodeIds[i]}">STEP${['➊','➋','➌'][i]}</b><h3>${title}</h3><span class="flow-illustration"><img src="${img}" alt=""></span><p>${body}</p></article>`).join('')}</div>
     <p class="flow-note">※繁忙期などお申込みが集中した場合は、入金までお時間を<br>いただく場合がございます。</p>
     <a class="flow-cta-exact" href="#estimate" data-node-id="529:27017"><span class="flow-cta-surface" data-node-id="529:27019"><img src="figma-assets/flow-cta-chevrons-529-27020.svg" alt=""><strong data-node-id="529:27027">お申し込みはこちら</strong></span></a>`);
 
