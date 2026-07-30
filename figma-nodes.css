@@ -347,7 +347,8 @@ body{overflow-x:hidden!important}
 .site-stage>.site-shell{width:393px!important;margin:0!important;border-radius:0!important;box-shadow:none!important;transform-origin:top left!important}
 
 /* Figma 529:27251: viewport-following CTA, scaled with the 393px page canvas. */
-.follow-cta-stage{position:fixed;z-index:1000;left:50%;bottom:0;width:393px;height:77px;overflow:hidden;transform:translateX(-50%);background:#fff8ea;box-shadow:0 0 4px rgba(0,0,0,.25)}
+.follow-cta-stage{position:fixed;z-index:1000;left:50%;bottom:0;width:393px;height:77px;overflow:hidden;transform:translateX(-50%);background:#fff8ea;box-shadow:0 0 4px rgba(0,0,0,.25);opacity:1;visibility:visible;transition:opacity .28s ease,transform .28s ease,visibility 0s linear}
+.follow-cta-stage.is-awaiting-trigger{transform:translate(-50%,calc(100% + 8px));opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s ease,transform .28s ease,visibility 0s linear .28s}
 .follow-cta-canvas{position:absolute;left:0;top:0;width:393px;height:77px;transform-origin:top left}
 .follow-cta-actions{position:absolute;left:4px;top:7.5px;display:flex;align-items:flex-start;gap:2px;width:386px;height:62px}
 .follow-cta-button{position:relative;display:block;flex:none;width:190px;height:59.862px;box-sizing:border-box;overflow:hidden;border-radius:8.615px;color:#fff;text-align:center;text-decoration:none;text-shadow:0 0 1.723px rgba(0,0,0,.25)}

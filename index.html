@@ -6,7 +6,7 @@
     <meta name="description" content="Appleギフトカード買取専門店 即日アリアちゃん" />
     <title>即日アリアちゃん</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="figma-nodes.css?v=floating-cta-tight-27" />
+    <link rel="stylesheet" href="figma-nodes.css?v=cta-trigger-28" />
   </head>
   <body>
     <div class="site-stage">
@@ -141,7 +141,7 @@
       <footer class="footer--figma" data-node-id="392:61394">copyright © 2026 株式会社Aria. all rights reserved.</footer>
       </div>
     </div>
-    <nav class="follow-cta-stage" data-node-id="529:27251" aria-label="お申し込みメニュー">
+    <nav class="follow-cta-stage is-awaiting-trigger" data-node-id="529:27251" aria-label="お申し込みメニュー">
       <div class="follow-cta-canvas">
         <div class="follow-cta-actions" data-node-id="529:27252">
           <a class="follow-cta-button follow-cta-button--new" href="#estimate" data-node-id="529:27256">
@@ -173,5 +173,21 @@
       new ResizeObserver(fitFigmaCanvas).observe(document.querySelector('.site-shell'));
     </script>
     <script src="real-sections.js?v=wide-rails-21"></script>
+    <script>
+      const followCta = document.querySelector('.follow-cta-stage');
+      const followCtaTrigger = document.querySelector('.speed-aria');
+      const revealFollowCta = () => followCta.classList.remove('is-awaiting-trigger');
+
+      if (followCtaTrigger.getBoundingClientRect().top < window.innerHeight) {
+        revealFollowCta();
+      } else {
+        const followCtaObserver = new IntersectionObserver(([entry]) => {
+          if (!entry.isIntersecting) return;
+          revealFollowCta();
+          followCtaObserver.disconnect();
+        }, { threshold: 0 });
+        followCtaObserver.observe(followCtaTrigger);
+      }
+    </script>
   </body>
 </html>
