@@ -222,9 +222,9 @@
   const companyRows = [
     ['社名', '株式会社Aria（英語名：Aria, inc.）'],
     ['所在地', '〒151-0053<br>東京都渋谷区代々木2-20-12<br>呉羽小野木ビル3F-C'],
-    ['メールアドレス', 'info@sokujitsu.aria-inc.co.jp'],
+    ['メールアドレス', 'aria.gift.2026@gmail.com（お問い合わせ用）<br>info@sokujitsuaria-inc.co.jp（送信専用）'],
     ['電話番号', '<a href="tel:0362580063">03-6258-0063</a>'],
-    ['営業時間', '<span>07:00 ～ 22:00（土日祝も営業）</span><span class="company-hours">毎月1日は24時間営業いたします。<img loading="lazy" decoding="async" src="figma-assets/company-hours-line.webp" alt=""></span>'],
+    ['営業時間', '<span>07:00 ～ 22:00（土日祝も営業）</span><span class="company-hours">毎月1日は0時から営業いたします。<img loading="lazy" decoding="async" src="figma-assets/company-hours-line.webp" alt=""></span>'],
     ['設立', '2020年6月9日'],
     ['代表取締役', '大附　俊幸'],
     ['事業内容', 'ネット型リユース事業<br>オンラインショップ向け決済サービス<br>ファクタリング事業'],

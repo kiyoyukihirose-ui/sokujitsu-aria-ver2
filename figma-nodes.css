@@ -371,6 +371,7 @@ body{overflow-x:hidden!important}
 
 /* Keep every company-table title aligned to the left edge of its cell. */
 .company-table>.company-row>dt{align-items:flex-start!important;text-align:left!important}
+.company-table>.company-row--3>dd{font-size:10px!important;line-height:14px!important;letter-spacing:-.15px!important}
 
 /* Interactive CTA motion: lift without changing document layout. */
 .orange-cta,.flow-cta-exact,.repeat-mypage,.follow-cta-button{will-change:transform,filter;transform:translateY(0);filter:drop-shadow(0 0 0 rgba(0,0,0,0));transition:transform .22s ease,filter .22s ease}
