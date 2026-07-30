@@ -183,7 +183,7 @@
           <span class="news-row"><strong>${title}</strong><img src="figma-assets/news-chevron.svg" alt=""></span>
           <time datetime="${datetime}">${date}</time>
         </summary>
-        <div class="news-answer">${body}</div>
+        <div class="news-answer"><div class="news-answer__inner">${body}</div></div>
       </details>`).join('')}</div>`);
 
   document.querySelectorAll('#news .news-item').forEach(item => {
@@ -199,9 +199,10 @@
         const animation = answer.animate([
           { height: `${answer.offsetHeight}px`, opacity: 1 },
           { height: '0px', opacity: 0 }
-        ], { duration: 420, easing: 'cubic-bezier(.22, 1, .36, 1)' });
+        ], { duration: 420, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'forwards' });
         await animation.finished;
         item.open = false;
+        animation.cancel();
         item.classList.remove('is-closing');
       } else {
         item.open = true;
@@ -209,8 +210,9 @@
         const animation = answer.animate([
           { height: '0px', opacity: 0 },
           { height: `${targetHeight}px`, opacity: 1 }
-        ], { duration: 420, easing: 'cubic-bezier(.22, 1, .36, 1)' });
+        ], { duration: 420, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'forwards' });
         await animation.finished;
+        animation.cancel();
       }
 
       item.classList.remove('is-animating');
