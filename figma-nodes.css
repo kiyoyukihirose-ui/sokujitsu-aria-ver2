@@ -221,3 +221,14 @@
 .hero__proof>.proof>.proof__diamond:before,.hero__proof>.proof>.proof__diamond:after{content:"";position:absolute;width:106.179px;height:106.179px;box-sizing:border-box;border-radius:30px;transform:rotate(-43.46deg) skewX(3.09deg) scale(1.01)}
 .hero__proof>.proof>.proof__diamond:before{left:24.985px;top:23.731px;border:1px solid #372200;background:#372200}
 .hero__proof>.proof>.proof__diamond:after{left:23.985px;top:19.941px;border:2px solid #372200;background:linear-gradient(137.75deg,#fff 9.465%,#ffe6b7 90.535%);box-shadow:inset 0 0 23px rgba(195,122,0,.5)}
+
+/* Pixel alignment for the complete FV node 392:49556. */
+.hero.hero{background:linear-gradient(90deg,#f7bc5b 0%,#feab26 100%)!important}
+.hero>.hero__rays{position:absolute;z-index:0;left:-341px;top:-96px;width:1074px;height:1076px;max-width:none;margin:0}
+.hero>.hero__glow{z-index:1!important}
+.hero>.hero__speed>span{top:35.189px!important;transform:none!important}
+.hero>.hero__speed>strong{top:14.189px!important;transform:none!important}
+.hero>.current-rate strong{left:26px!important;top:19px!important;width:134px!important;height:87px!important;font-family:Inter,sans-serif!important;font-size:72.21px!important;font-weight:800!important;line-height:normal!important;letter-spacing:0!important;transform:none!important;background:none!important;color:#ff9008!important}
+.hero>.current-rate .current-rate__grid>div+div strong{left:11.5px!important;top:22px!important;width:123px!important;height:84px!important;font-size:69.601px!important;background:none!important;color:#078ccb!important;transform:none!important}
+.hero>.current-rate em{font-size:33.408px!important;font-weight:800!important;line-height:normal!important}
+.hero>.hero__proof{left:-11px!important;top:476px!important}
