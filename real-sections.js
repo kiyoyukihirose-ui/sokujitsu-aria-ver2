@@ -80,7 +80,7 @@
     <div class="flow-band"><img src="figma-assets/flow-band-456-93716.png" alt=""><p><small>あっという間に振込完了！</small><strong>お申し込みの流れ</strong></p></div>
     <div class="flow-cards">${steps.map(([title,img,body],i)=>`<article class="flow-card flow-card--${i+1}"><b class="flow-step" data-node-id="${stepBackgroundNodeIds[i]}">STEP${['➊','➋','➌'][i]}</b><h3>${title}</h3><img class="flow-illustration" src="${img}" alt=""><p>${body}</p></article>`).join('')}</div>
     <p class="flow-note">※繁忙期などお申込みが集中した場合は、入金までお時間を<br>いただく場合がございます。</p>
-    <a class="flow-cta-exact" href="#estimate"><img src="asset-cta-mobile-flow.png" alt="お申し込みはこちら"></a>`);
+    <a class="flow-cta-exact" href="#estimate" data-node-id="529:27017"><span class="flow-cta-surface" data-node-id="529:27019"><img src="figma-assets/flow-cta-chevrons-529-27020.svg" alt=""><strong data-node-id="529:27027">お申し込みはこちら</strong></span></a>`);
 
   replace('[data-node-id="392:61195"]', `
     <img class="repeat-corner" src="figma-assets/repeat-corner.svg" alt="">
@@ -118,7 +118,7 @@
   const faq = replace('[data-node-id="392:61241"]', `
     <img class="faq-title-glow" src="figma-assets/faq-title-glow.svg" alt="">
     <h2 class="faq-title">よくある質問</h2>
-    <div class="faq-list">${faqs.map(([question,answer],i)=>`<div class="faq-item faq-item--${i+1}${i===0?' is-expanded':''}"><button class="faq-summary" type="button" aria-expanded="${i===0}"><span class="faq-q"><img src="figma-assets/faq-q-circle.svg" alt=""><b>Q</b></span><strong>${question}</strong><i class="faq-toggle"></i></button><p class="faq-answer">${answer}</p></div>`).join('')}</div>`);
+    <div class="faq-list">${faqs.map(([question,answer],i)=>`<div class="faq-item faq-item--${i+1}"><button class="faq-summary" type="button" aria-expanded="false"><span class="faq-q"><img src="figma-assets/faq-q-circle.svg" alt=""><b>Q</b></span><strong>${question}</strong><i class="faq-toggle"></i></button><p class="faq-answer">${answer}</p></div>`).join('')}</div>`);
   const faqItems = [...(faq?.querySelectorAll('.faq-item') || [])];
   const setFaqItem = (item, expanded) => {
     item.classList.toggle('is-expanded', expanded);
@@ -138,7 +138,7 @@
     faq?.style.setProperty('--faq-section-height', `${118 + listHeight + 83}px`);
   };
   const resetFaq = () => {
-    faqItems.forEach((item, index) => setFaqItem(item, index === 0));
+    faqItems.forEach(item => setFaqItem(item, false));
     updateFaqLayout();
   };
   resetFaq();
