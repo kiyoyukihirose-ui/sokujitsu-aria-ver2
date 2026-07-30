@@ -45,9 +45,10 @@
 
   replace('[data-node-id="392:54873"]', `
     <div class="speed-band" data-node-id="529:20724"><img loading="lazy" decoding="async" src="figma-assets/section-heading-band.webp" alt=""><p><small>即日アリアちゃんは</small><strong>振込までがとにかく速い！</strong></p></div>
+    <img loading="lazy" decoding="async" class="speed-badge-glow" src="figma-assets/speed-copy-ellipse-529-20744.webp" alt="">
     <div class="speed-badge"><img loading="lazy" decoding="async" src="asset-speed-badge-bg.webp" alt=""><p><small>申込から振込まで、</small><strong>最短<em>3</em>分</strong></p></div>
     <img loading="lazy" decoding="async" class="speed-aria" src="asset-speed-aria.webp" alt="案内するアリアちゃん">
-    <div class="speed-copy" data-node-id="529:20744"><img loading="lazy" decoding="async" class="speed-copy-glow" src="figma-assets/speed-copy-ellipse-529-20744.webp" alt=""><p>Appleギフトカード専門の買取だからこそ<br>実現できるスピードで、<br>待ち時間の不安や急な出費に応えます。</p><small>※繁忙期などお申込みが集中した場合は、<br>入金までお時間をいただく場合がございます。</small></div>`);
+    <div class="speed-copy" data-node-id="529:20744"><p>Appleギフトカード専門の買取だからこそ<br>実現できるスピードで、<br>待ち時間の不安や急な出費に応えます。</p><small>※繁忙期などお申込みが集中した場合は、<br>入金までお時間をいただく場合がございます。</small></div>`);
 
   replace('[data-node-id="392:54905"]', `
     <img loading="lazy" decoding="async" class="fee-halftone" data-node-id="529:20756" src="figma-assets/fee-halftone-529-20756.webp" alt="">

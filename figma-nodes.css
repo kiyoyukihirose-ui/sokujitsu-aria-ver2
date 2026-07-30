@@ -326,8 +326,8 @@
 /* Exact decorative assets for Figma nodes 529:20724 and 529:20744. */
 .feature--figma-speed>.speed-band{overflow:visible!important}
 .feature--figma-speed>.speed-band>img{width:361px!important;height:91px!important;max-width:none!important;object-fit:fill!important}
-.feature--figma-speed>.speed-copy{z-index:1!important;overflow:visible!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;isolation:isolate!important}
-.feature--figma-speed>.speed-copy>.speed-copy-glow{position:absolute!important;z-index:0!important;left:-150px!important;top:-150px!important;width:630px!important;height:450px!important;max-width:none!important;pointer-events:none!important}
+.feature--figma-speed>.speed-badge-glow{position:absolute!important;z-index:0!important;left:-192.5px!important;top:100px!important;width:630px!important;height:450px!important;max-width:none!important;pointer-events:none!important}
+.feature--figma-speed>.speed-copy{z-index:1!important;overflow:visible!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important}
 .feature--figma-speed>.speed-copy>p,.feature--figma-speed>.speed-copy>small{position:relative!important;z-index:1!important}
 
 /* Exact decorative assets for Figma nodes 529:20756, 529:21781 and 529:21780. */
