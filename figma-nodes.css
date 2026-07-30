@@ -347,14 +347,14 @@ body{overflow-x:hidden!important}
 .site-stage>.site-shell{width:393px!important;margin:0!important;border-radius:0!important;box-shadow:none!important;transform-origin:top left!important}
 
 /* Figma 529:27251: viewport-following CTA, scaled with the 393px page canvas. */
-.follow-cta-stage{position:fixed;z-index:1000;left:50%;bottom:0;width:393px;height:85px;overflow:hidden;transform:translateX(-50%);background:#fff8ea;box-shadow:0 0 4px rgba(0,0,0,.25)}
-.follow-cta-canvas{position:absolute;left:0;top:0;width:393px;height:85px;transform-origin:top left}
-.follow-cta-actions{position:absolute;left:4px;top:11px;display:flex;align-items:flex-start;gap:2px;width:386px;height:62px}
+.follow-cta-stage{position:fixed;z-index:1000;left:50%;bottom:0;width:393px;height:77px;overflow:hidden;transform:translateX(-50%);background:#fff8ea;box-shadow:0 0 4px rgba(0,0,0,.25)}
+.follow-cta-canvas{position:absolute;left:0;top:0;width:393px;height:77px;transform-origin:top left}
+.follow-cta-actions{position:absolute;left:4px;top:7.5px;display:flex;align-items:flex-start;gap:2px;width:386px;height:62px}
 .follow-cta-button{position:relative;display:block;flex:none;width:190px;height:59.862px;box-sizing:border-box;overflow:hidden;border-radius:8.615px;color:#fff;text-align:center;text-decoration:none;text-shadow:0 0 1.723px rgba(0,0,0,.25)}
 .follow-cta-button:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none}
 .follow-cta-button--new{background:linear-gradient(101.265deg,#f5a623 3.6719%,#ff8800 96.328%);box-shadow:2px 2.14px 0 #674000,inset 0 0 8.922px rgba(255,255,255,.6)}
-.follow-cta-button--new small{position:absolute;left:25px;top:9px;display:grid;place-items:center;width:140px;height:19px;border-radius:30px;background:#fff;font-family:Inter,"Noto Sans JP",sans-serif;font-size:12px;font-weight:700;line-height:normal;text-shadow:none;box-shadow:0 0 2px rgba(0,0,0,.25)}
-.follow-cta-button--new small>span{background:linear-gradient(117.573deg,#f5a623 3.6719%,#ff8800 96.328%);background-clip:text;-webkit-background-clip:text;color:transparent}
-.follow-cta-button--new strong{position:absolute;left:15px;top:32px;width:160px;font-family:Inter,"Noto Sans JP",sans-serif;font-size:16px;font-weight:800;line-height:normal}
+.follow-cta-button--new small{position:absolute;left:25px;top:9px;display:grid;place-items:center;width:140px;height:19px;border-radius:30px;background:#fff;font-family:Inter,"Noto Sans JP",sans-serif;font-size:12px;font-weight:700;line-height:14px;text-shadow:none;box-shadow:0 0 2px rgba(0,0,0,.25)}
+.follow-cta-button--new small>span{display:block;line-height:14px;background:linear-gradient(117.573deg,#f5a623 3.6719%,#ff8800 96.328%);background-clip:text;-webkit-background-clip:text;color:transparent}
+.follow-cta-button--new strong{position:absolute;left:15px;top:31px;width:160px;font-family:Inter,"Noto Sans JP",sans-serif;font-size:16px;font-weight:800;line-height:19px;white-space:nowrap}
 .follow-cta-button--mypage{width:190.381px;height:59.503px;background:linear-gradient(101.625deg,#007ebd 4.7042%,#30b4f5 95.296%);box-shadow:1.62px 2.5px 0 #00425e,inset 0 0 8.922px #0075ae}
-.follow-cta-button--mypage strong{position:absolute;left:9px;top:11.5px;width:172px;font-family:Inter,"Noto Sans JP",sans-serif;font-size:15px;font-weight:800;line-height:normal}
+.follow-cta-button--mypage strong{position:absolute;left:9px;top:11.75px;width:172px;font-family:Inter,"Noto Sans JP",sans-serif;font-size:15px;font-weight:800;line-height:18px;white-space:nowrap}
