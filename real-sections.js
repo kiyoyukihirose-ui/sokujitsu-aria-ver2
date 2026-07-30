@@ -151,18 +151,37 @@
   window.addEventListener('resize', updateFaqLayout);
 
   const newsItems = [
-    ['26/07/15', '【営業時間変更のお知らせ】'],
-    ['26/07/15', '買取率アップキャンペーン！'],
-    ['26/07/15', '買取率アップキャンペーン！']
+    {
+      date: '2026.06.24',
+      datetime: '2026-06-24',
+      title: '【期間限定】<br>再利用のお客様も還元率92％',
+      body: `<p>いつも即日アリアちゃんをご利用いただき、誠にありがとうございます。</p>
+        <p>日頃ご利用いただいている皆様への感謝を込めて、期間限定で還元率92％キャンペーンを実施いたします。<br>キャンペーン期間中は何度利用してもご新規様同様92％でお受けすることが出来ます！</p>
+        <h3>【キャンペーン期間】</h3>
+        <p><strong>6月24日 22:00 ～ 6月26日 23:59</strong></p>
+        <p>再利用をご検討中のお客様は、ぜひこの機会をご活用くださいませ。</p>
+        <p>皆様のお申し込みを心よりお待ちしております。</p>`
+    },
+    {
+      date: '2026.05.13',
+      datetime: '2026-05-13',
+      title: '即日アリアちゃんが<br>生まれ変わりました！',
+      body: `<p>新しくなった即日アリアちゃんでは、ご不要になったAppleギフトカードをお取引するサービスとなっております。</p>
+        <p>以前ご利用いただいていたお客様につきましても、今回より新規のお客様としてご案内させていただきます。<br>※以前のマイページはご利用いただけませんのでご注意ください。</p>
+        <p>はじめての方も、以前ご利用いただいていた方も、ぜひこの機会にご利用ください。</p>
+        <p>スタッフ一同、たくさんのお申し込みを心よりお待ちしております。</p>`
+    }
   ];
   replace('[data-node-id="392:61312"]', `
     <h2 class="news-title">最新のお知らせ</h2>
-    <div class="news-list">${newsItems.map(([date, title], index) => `
-      <a class="news-item news-item--${index + 1}" href="#">
-        <span class="news-row"><strong>${title}</strong><img src="figma-assets/news-chevron.svg" alt=""></span>
-        <time datetime="2026-07-15">${date}</time>
-      </a>`).join('')}</div>
-    <a class="news-more" href="#"><span>さらに遡る</span><img class="news-more-line" src="figma-assets/news-underline.svg" alt=""><img class="news-more-arrow" src="figma-assets/news-more-arrow.svg" alt=""></a>`);
+    <div class="news-list">${newsItems.map(({ date, datetime, title, body }, index) => `
+      <details class="news-item news-item--${index + 1}">
+        <summary class="news-summary">
+          <span class="news-row"><strong>${title}</strong><img src="figma-assets/news-chevron.svg" alt=""></span>
+          <time datetime="${datetime}">${date}</time>
+        </summary>
+        <div class="news-answer">${body}</div>
+      </details>`).join('')}</div>`);
 
   const companyRows = [
     ['社名', '株式会社Aria（英語名：Aria, inc.）'],
