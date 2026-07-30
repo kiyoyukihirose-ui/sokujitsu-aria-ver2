@@ -232,3 +232,5 @@
 .hero>.current-rate .current-rate__grid>div+div strong{left:11.5px!important;top:22px!important;width:123px!important;height:84px!important;font-size:69.601px!important;background:none!important;color:#078ccb!important;transform:none!important}
 .hero>.current-rate em{font-size:33.408px!important;font-weight:800!important;line-height:normal!important}
 .hero>.hero__proof{left:-11px!important;top:476px!important}
+.hero>.current-rate .current-rate__grid>div:first-child small{left:60px!important}
+.hero>.hero__speed>.hero__stopwatch{left:28.164px!important}
