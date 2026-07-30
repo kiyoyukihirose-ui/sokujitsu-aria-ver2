@@ -140,6 +140,38 @@
   }));
   window.addEventListener('resize', updateFaqLayout);
 
+  const newsItems = [
+    ['26/07/15', '【営業時間変更のお知らせ】'],
+    ['26/07/15', '買取率アップキャンペーン！'],
+    ['26/07/15', '買取率アップキャンペーン！']
+  ];
+  replace('[data-node-id="392:61312"]', `
+    <h2 class="news-title">最新のお知らせ</h2>
+    <div class="news-list">${newsItems.map(([date, title], index) => `
+      <a class="news-item news-item--${index + 1}" href="#">
+        <span class="news-row"><strong>${title}</strong><img src="figma-assets/news-chevron.svg" alt=""></span>
+        <time datetime="2026-07-15">${date}</time>
+      </a>`).join('')}</div>
+    <a class="news-more" href="#"><span>さらに遡る</span><img class="news-more-line" src="figma-assets/news-underline.svg" alt=""><img class="news-more-arrow" src="figma-assets/news-more-arrow.svg" alt=""></a>`);
+
+  const companyRows = [
+    ['社名', '株式会社Aria（英語名：Aria, inc.）'],
+    ['所在地', '〒151-0053<br>東京都渋谷区代々木2-20-12<br>呉羽小野木ビル3F-C'],
+    ['メールアドレス', 'info@sokujitsu.aria-inc.co.jp'],
+    ['電話番号', '<a href="tel:0362580063">03-6258-0063</a>'],
+    ['営業時間', '<span>07:00 ～ 22:00（土日祝も営業）</span><span class="company-hours">毎月1日は24時間営業いたします。<img src="figma-assets/company-hours-line.svg" alt=""></span>'],
+    ['設立', '2020年6月9日'],
+    ['代表取締役', '大附　俊幸'],
+    ['事業内容', 'ネット型リユース事業<br>オンラインショップ向け決済サービス<br>ファクタリング事業'],
+    ['資本金', '9000万円'],
+    ['古物商番号', '東京都公安委員会許可<br>古物商　第304362115284号']
+  ];
+  replace('[data-node-id="392:61338"]', `
+    <h2 class="company-title">会社概要</h2>
+    <dl class="company-table">${companyRows.map(([label, value], index) => `<div class="company-row company-row--${index + 1}"><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl>
+    <figure class="company-building"><img src="figma-assets/company-building.png" alt="呉羽小野木ビル外観"></figure>
+    <figure class="company-map"><img src="figma-assets/company-map.png" alt="会社所在地の地図"></figure>`);
+
   const amount = estimator?.querySelector('#amount');
   const format = value => Math.round(value).toLocaleString('ja-JP');
   const update = () => {
