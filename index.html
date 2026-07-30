@@ -6,7 +6,7 @@
     <meta name="description" content="Appleギフトカード買取専門店 即日アリアちゃん" />
     <title>即日アリアちゃん</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="figma-nodes.css?v=fv-detail-4" />
+    <link rel="stylesheet" href="figma-nodes.css?v=estimate-pixel-1" />
   </head>
   <body>
     <div class="site-shell">
@@ -34,7 +34,7 @@
             <img class="hero__speed-line" src="figma-assets/fv-speed-underline.svg" alt="" />
           </div>
 
-          <div class="current-rate" data-node-id="392:52714">
+          <div class="current-rate" data-node-id="392:52714" data-first-rate="90" data-repeat-rate="87">
             <div class="current-rate__title"><img src="figma-assets/fv-rainbow.png" alt="" />現在の買取率</div>
             <div class="current-rate__grid">
               <div><small>初回</small><strong>90<em>％</em></strong></div>
@@ -52,10 +52,10 @@
 
         <section class="section estimator estimator--figma" id="estimate" data-node-id="392:52780">
           <h2>見積もり計算</h2>
-          <label class="amount-field"><input id="amount" type="text" inputmode="numeric" value="5,000" aria-label="ギフトカード額面" /><span>円分</span></label>
+          <label class="amount-field"><input id="amount" type="text" inputmode="numeric" value="30,000" aria-label="ギフトカード額面" /><span>円分</span></label>
           <p class="subtext">のAppleギフトカードがある場合</p>
-          <div class="estimate-card estimate-card--first"><span>初回</span><strong id="firstResult">4,500<small>円</small></strong><b>90%</b></div>
-          <div class="estimate-card estimate-card--repeat"><span>2回目以降</span><strong id="repeatResult">4,350<small>円</small></strong><b>87%</b></div>
+          <div class="estimate-card estimate-card--first"><span>初回</span><strong id="firstResult">27,000<small>円</small></strong><b>90％</b></div>
+          <div class="estimate-card estimate-card--repeat"><span>2回目以降</span><strong id="repeatResult">26,100<small>円</small></strong><b>87％</b></div>
           <p>をそのままお振込み！<br /><mark>振込手数料・事務手数料0円！</mark></p>
           <a class="cta" href="#apply">この金額で申し込む <span>››</span></a>
         </section>
@@ -155,15 +155,6 @@
       <footer class="footer--figma" data-node-id="392:61394">copyright © 2026 株式会社Aria. all rights reserved.</footer>
     </div>
     <script>
-      const amount = document.querySelector('#amount');
-      const format = value => Math.round(value).toLocaleString('ja-JP');
-      const updateEstimate = () => {
-        const value = Number(amount.value.replace(/[^0-9]/g, '')) || 0;
-        document.querySelector('#firstResult').innerHTML = `${format(value * .9)}<small>円</small>`;
-        document.querySelector('#repeatResult').innerHTML = `${format(value * .87)}<small>円</small>`;
-      };
-      amount.addEventListener('input', updateEstimate);
-      amount.addEventListener('blur', () => { amount.value = format(Number(amount.value.replace(/[^0-9]/g, '')) || 0); });
       const fitFigmaCanvas = () => {
         const shell = document.querySelector('.site-shell');
         const scale = Math.min(1, window.innerWidth / 393);
@@ -174,6 +165,6 @@
       fitFigmaCanvas();
       window.addEventListener('resize', fitFigmaCanvas);
     </script>
-    <script src="real-sections.js?v=final-sections-exact-1"></script>
+    <script src="real-sections.js?v=estimate-rules-1"></script>
   </body>
 </html>

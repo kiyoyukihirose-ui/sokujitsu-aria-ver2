@@ -5,14 +5,22 @@
     return node;
   };
 
+  const rateSource = document.querySelector('[data-node-id="392:52714"]');
+  const readRates = () => ({
+    first: Number(rateSource?.dataset.firstRate) || 90,
+    repeat: Number(rateSource?.dataset.repeatRate) || 87
+  });
+  let rates = readRates();
+  const initialAmount = 30000;
+
   const estimator = replace('[data-node-id="392:52780"]', `
     <p class="estimator-license">※東京都公安委員会 第304362115284号</p>
-    <div class="estimate-panel">
+    <div class="estimate-panel is-pending">
       <h2>見積もり計算</h2>
-      <label class="estimate-input"><input id="amount" inputmode="numeric" value="5,000" aria-label="Appleギフトカード額面"><span>円分</span></label>
+      <label class="estimate-input"><input id="amount" type="text" inputmode="numeric" value="30,000" autocomplete="off" aria-label="Appleギフトカード額面"><span>円分</span></label>
       <p class="estimate-lead">のAppleギフトカードがある場合</p>
-      <div class="estimate-result estimate-result--first"><span>初回</span><strong id="firstResult">4,500<small>円</small></strong><b>90%</b></div>
-      <div class="estimate-result estimate-result--repeat"><span>2回目以降</span><strong id="repeatResult">4,350<small>円</small></strong><b>87%</b></div>
+      <div class="estimate-result estimate-result--first"><span>初回</span><strong id="firstResult">27,000<small>円</small></strong><b id="firstEstimateRate">${rates.first}％</b></div>
+      <div class="estimate-result estimate-result--repeat"><span>2回目以降</span><strong id="repeatResult">26,100<small>円</small></strong><b id="repeatEstimateRate">${rates.repeat}％</b></div>
       <p class="estimate-copy">をそのままお振込み！<br><strong>振込手数料・事務手数料0円！</strong></p>
       <a class="orange-cta" href="#apply">この金額で申し込む <span>››</span></a>
     </div>`);
@@ -31,7 +39,7 @@
     <div class="rate-board">
       <h2><img src="figma-assets/rate-raw-2.png" alt="">Appleギフトカード買取</h2>
       <table><thead><tr><th></th><th>初回</th><th>2回目以降</th></tr></thead>
-      <tbody>${services.map(([icon,name]) => `<tr><th><i><img src="${icon}" alt=""></i><span>${name}</span></th><td>90<small>％</small></td><td>87<small>％</small></td></tr>`).join('')}</tbody></table>
+      <tbody>${services.map(([icon,name]) => `<tr><th><i><img src="${icon}" alt=""></i><span>${name}</span></th><td data-rate-display="first">${rates.first}<small>％</small></td><td data-rate-display="repeat">${rates.repeat}<small>％</small></td></tr>`).join('')}</tbody></table>
       <p>※Appleギフトカードのみの買取となります</p>
     </div>`);
 
@@ -173,12 +181,66 @@
     <figure class="company-map"><img src="figma-assets/company-map.png" alt="会社所在地の地図"></figure>`);
 
   const amount = estimator?.querySelector('#amount');
-  const format = value => Math.round(value).toLocaleString('ja-JP');
-  const update = () => {
-    const value = Number(amount.value.replace(/[^0-9]/g, '')) || 0;
-    estimator.querySelector('#firstResult').innerHTML = `${format(value * .9)}<small>円</small>`;
-    estimator.querySelector('#repeatResult').innerHTML = `${format(value * .87)}<small>円</small>`;
+  const estimatePanel = estimator?.querySelector('.estimate-panel');
+  const format = value => Math.trunc(value).toLocaleString('ja-JP');
+  const normalizeDigits = value => value
+    .replace(/[０-９]/g, character => String.fromCharCode(character.charCodeAt(0) - 0xFEE0))
+    .replace(/[^0-9]/g, '')
+    .slice(0, 7);
+  let hasUserAmount = false;
+
+  const renderEstimate = value => {
+    const firstValue = Math.floor(value * rates.first / 100);
+    const repeatValue = Math.floor(value * rates.repeat / 100);
+    estimator.querySelector('#firstResult').innerHTML = `${format(firstValue)}<small>円</small>`;
+    estimator.querySelector('#repeatResult').innerHTML = `${format(repeatValue)}<small>円</small>`;
   };
-  amount?.addEventListener('input', update);
-  amount?.addEventListener('blur', () => amount.value = format(Number(amount.value.replace(/[^0-9]/g, '')) || 0));
+
+  const syncRateDisplays = () => {
+    rates = readRates();
+    const heroValues = rateSource?.querySelectorAll('.current-rate__grid strong');
+    if (heroValues?.[0]) heroValues[0].innerHTML = `${rates.first}<em>％</em>`;
+    if (heroValues?.[1]) heroValues[1].innerHTML = `${rates.repeat}<em>％</em>`;
+    const firstEstimateRate = estimator?.querySelector('#firstEstimateRate');
+    const repeatEstimateRate = estimator?.querySelector('#repeatEstimateRate');
+    if (firstEstimateRate) firstEstimateRate.textContent = `${rates.first}％`;
+    if (repeatEstimateRate) repeatEstimateRate.textContent = `${rates.repeat}％`;
+    document.querySelectorAll('[data-rate-display="first"]').forEach(node => node.innerHTML = `${rates.first}<small>％</small>`);
+    document.querySelectorAll('[data-rate-display="repeat"]').forEach(node => node.innerHTML = `${rates.repeat}<small>％</small>`);
+    const digits = normalizeDigits(amount?.value || '');
+    renderEstimate(digits ? Number(digits) : initialAmount);
+  };
+
+  amount?.addEventListener('focus', () => {
+    if (!hasUserAmount) amount.value = '';
+  });
+  amount?.addEventListener('input', () => {
+    const digits = normalizeDigits(amount.value);
+    amount.value = digits;
+    hasUserAmount = digits.length > 0;
+    estimatePanel?.classList.toggle('is-pending', !hasUserAmount);
+    renderEstimate(hasUserAmount ? Number(digits) : initialAmount);
+  });
+  amount?.addEventListener('blur', () => {
+    const digits = normalizeDigits(amount.value);
+    if (!digits) {
+      hasUserAmount = false;
+      amount.value = format(initialAmount);
+      estimatePanel?.classList.add('is-pending');
+      renderEstimate(initialAmount);
+      return;
+    }
+    hasUserAmount = true;
+    amount.value = format(Number(digits));
+    estimatePanel?.classList.remove('is-pending');
+    renderEstimate(Number(digits));
+  });
+
+  if (rateSource) {
+    new MutationObserver(syncRateDisplays).observe(rateSource, {
+      attributes: true,
+      attributeFilter: ['data-first-rate', 'data-repeat-rate']
+    });
+  }
+  syncRateDisplays();
 })();
