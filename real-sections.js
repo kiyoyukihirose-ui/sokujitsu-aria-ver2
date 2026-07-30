@@ -185,6 +185,37 @@
         <div class="news-answer">${body}</div>
       </details>`).join('')}</div>`);
 
+  document.querySelectorAll('#news .news-item').forEach(item => {
+    const summary = item.querySelector('.news-summary');
+    const answer = item.querySelector('.news-answer');
+    summary.addEventListener('click', async event => {
+      event.preventDefault();
+      if (item.classList.contains('is-animating')) return;
+      item.classList.add('is-animating');
+
+      if (item.open) {
+        item.classList.add('is-closing');
+        const animation = answer.animate([
+          { height: `${answer.offsetHeight}px`, opacity: 1 },
+          { height: '0px', opacity: 0 }
+        ], { duration: 420, easing: 'cubic-bezier(.22, 1, .36, 1)' });
+        await animation.finished;
+        item.open = false;
+        item.classList.remove('is-closing');
+      } else {
+        item.open = true;
+        const targetHeight = answer.offsetHeight;
+        const animation = answer.animate([
+          { height: '0px', opacity: 0 },
+          { height: `${targetHeight}px`, opacity: 1 }
+        ], { duration: 420, easing: 'cubic-bezier(.22, 1, .36, 1)' });
+        await animation.finished;
+      }
+
+      item.classList.remove('is-animating');
+    });
+  });
+
   const companyRows = [
     ['社名', '株式会社Aria（英語名：Aria, inc.）'],
     ['所在地', '〒151-0053<br>東京都渋谷区代々木2-20-12<br>呉羽小野木ビル3F-C'],
