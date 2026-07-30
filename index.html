@@ -6,7 +6,7 @@
     <meta name="description" content="Appleギフトカード買取専門店 即日アリアちゃん" />
     <title>即日アリアちゃん</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="figma-nodes.css?v=header-vector-24" />
+    <link rel="stylesheet" href="figma-nodes.css?v=floating-cta-25" />
   </head>
   <body>
     <div class="site-stage">
@@ -141,14 +141,32 @@
       <footer class="footer--figma" data-node-id="392:61394">copyright © 2026 株式会社Aria. all rights reserved.</footer>
       </div>
     </div>
+    <nav class="follow-cta-stage" data-node-id="529:27251" aria-label="お申し込みメニュー">
+      <div class="follow-cta-canvas">
+        <div class="follow-cta-actions" data-node-id="529:27252">
+          <a class="follow-cta-button follow-cta-button--new" href="#estimate" data-node-id="529:27256">
+            <small><span>初めての方はこちら！</span></small>
+            <strong>新規お申し込み</strong>
+          </a>
+          <a class="follow-cta-button follow-cta-button--mypage" href="#apply" data-node-id="529:27266">
+            <strong>マイページが<br />見つからない方はこちら</strong>
+          </a>
+        </div>
+      </div>
+    </nav>
     <script>
       const fitFigmaCanvas = () => {
         const stage = document.querySelector('.site-stage');
         const shell = document.querySelector('.site-shell');
+        const followCta = document.querySelector('.follow-cta-stage');
+        const followCtaCanvas = document.querySelector('.follow-cta-canvas');
         const scale = stage.clientWidth / 393;
         shell.style.transform = `scale(${scale})`;
         shell.style.transformOrigin = 'top left';
         stage.style.height = `${shell.scrollHeight * scale}px`;
+        followCta.style.width = `${393 * scale}px`;
+        followCta.style.height = `${85 * scale}px`;
+        followCtaCanvas.style.transform = `scale(${scale})`;
       };
       fitFigmaCanvas();
       window.addEventListener('resize', fitFigmaCanvas);
