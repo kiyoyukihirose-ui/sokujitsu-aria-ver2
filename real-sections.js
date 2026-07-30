@@ -108,14 +108,18 @@
   const faq = replace('[data-node-id="392:61241"]', `
     <img class="faq-title-glow" src="figma-assets/faq-title-glow.svg" alt="">
     <h2 class="faq-title">よくある質問</h2>
-    <div class="faq-list">${faqs.map(([question,answer],i)=>`<details class="faq-item faq-item--${i+1}"${i===0?' open':''}><summary><span class="faq-q"><img src="figma-assets/faq-q-circle.svg" alt=""><b>Q</b></span><strong>${question}</strong><i class="faq-toggle"></i></summary><p>${answer}</p></details>`).join('')}</div>`);
+    <div class="faq-list">${faqs.map(([question,answer],i)=>`<div class="faq-item faq-item--${i+1}${i===0?' is-expanded':''}"><button class="faq-summary" type="button" aria-expanded="${i===0}"><span class="faq-q"><img src="figma-assets/faq-q-circle.svg" alt=""><b>Q</b></span><strong>${question}</strong><i class="faq-toggle"></i></button><p class="faq-answer">${answer}</p></div>`).join('')}</div>`);
   const faqItems = [...(faq?.querySelectorAll('.faq-item') || [])];
-  const resetFaq = () => faqItems.forEach((item, index) => { item.open = index === 0; });
+  const setFaqItem = (item, expanded) => {
+    item.classList.toggle('is-expanded', expanded);
+    item.querySelector('.faq-summary').setAttribute('aria-expanded', String(expanded));
+  };
+  const resetFaq = () => faqItems.forEach((item, index) => setFaqItem(item, index === 0));
   resetFaq();
   window.addEventListener('pageshow', resetFaq, { once: true });
-  faqItems.forEach(item => item.addEventListener('toggle', () => {
-    if (!item.open) return;
-    faqItems.forEach(other => { if (other !== item) other.open = false; });
+  faqItems.forEach(item => item.querySelector('.faq-summary').addEventListener('click', () => {
+    const shouldExpand = !item.classList.contains('is-expanded');
+    faqItems.forEach(other => setFaqItem(other, shouldExpand && other === item));
   }));
 
   const amount = estimator?.querySelector('#amount');
