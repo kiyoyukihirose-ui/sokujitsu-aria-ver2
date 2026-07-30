@@ -72,6 +72,52 @@
     <p class="flow-note">※繁忙期などお申込みが集中した場合は、入金までお時間を<br>いただく場合がございます。</p>
     <a class="flow-cta-exact" href="#estimate"><img src="asset-cta-mobile-flow.png" alt="お申し込みはこちら"></a>`);
 
+  replace('[data-node-id="392:61195"]', `
+    <img class="repeat-corner" src="figma-assets/repeat-corner.svg" alt="">
+    <div class="repeat-panel"></div>
+    <h2 class="repeat-title">2回目からは、<br>さらに使いやすく!</h2>
+    <p class="repeat-intro">サービスを既に利用されたことのある方は<br><strong>お客様専用のマイページより</strong></p>
+    <p class="repeat-shortcut">たった<strong>3点の記入</strong>でラクラクお申し込みが完了！</p>
+    <div class="repeat-circle repeat-circle--gift">
+      <img src="figma-assets/repeat-circle-top.svg" alt="">
+      <span class="gift-card"><b>GIFTCODE</b><i>＊＊＊＊＊＊＊＊</i></span>
+      <strong>ギフトコード</strong>
+    </div>
+    <div class="repeat-circle repeat-circle--bank">
+      <img class="repeat-circle-bg" src="figma-assets/repeat-circle-bank.svg" alt="">
+      <span class="bank-icon"><img src="figma-assets/repeat-bank-2.svg" alt=""><img src="figma-assets/repeat-bank-1.svg" alt=""><img src="figma-assets/repeat-bank-column.svg" alt=""><img src="figma-assets/repeat-bank-column.svg" alt=""><img src="figma-assets/repeat-bank-3.svg" alt=""></span>
+      <strong>銀行口座</strong>
+    </div>
+    <div class="repeat-circle repeat-circle--amount">
+      <img class="repeat-circle-bg" src="figma-assets/repeat-circle-top.svg" alt="">
+      <img class="yen-icon" src="figma-assets/repeat-yen.svg" alt="">
+      <strong>金額</strong>
+    </div>
+    <a class="repeat-mypage" href="#apply">マイページが<br>見つからない方はこちら※</a>
+    <p class="repeat-note">※ご登録のメールアドレスにマイページをお送りします。</p>`);
+
+  const faqs = [
+    ['利用する際に身分証明証は必要ですか。','初回のご利用のみ、顔写真付きの身分証明<br>書のご提示をお願いしております。2回目<br>以降のご利用の際は不要となっておりま<br>す。<br>※一定期間ご利用が空いたお客様には、再<br>度ご提示をお願いする場合がございます。'],
+    ['第三者に利用を知られることはありますか。','ご家族・勤務先へのご連絡や郵送物は一切ありません。個人情報は厳重に管理しています。'],
+    ['銀行への振込はいつ反映されますか。','お振込み完了後、金融機関の処理状況に応じて口座へ反映されます。'],
+    ['Appleギフトカードはどこで購入できますか？','コンビニエンスストアやオンラインストアなどで購入できます。'],
+    ['Appleギフトカード以外の買取も受け付けていますか。','Appleギフトカードのみを専門にお買取りしています。'],
+    ['申込金額はいくらからですか。','お申し込み画面に表示される最低金額からご利用いただけます。'],
+    ['1日の利用上限はいくらですか。','ご利用状況に応じて個別にご案内しています。']
+  ];
+  const faq = replace('[data-node-id="392:61241"]', `
+    <img class="faq-title-glow" src="figma-assets/faq-title-glow.svg" alt="">
+    <h2 class="faq-title">よくある質問</h2>
+    <div class="faq-list">${faqs.map(([question,answer],i)=>`<details class="faq-item faq-item--${i+1}"${i===0?' open':''}><summary><span class="faq-q"><img src="figma-assets/faq-q-circle.svg" alt=""><b>Q</b></span><strong>${question}</strong><i class="faq-toggle"></i></summary><p>${answer}</p></details>`).join('')}</div>`);
+  const faqItems = [...(faq?.querySelectorAll('.faq-item') || [])];
+  const resetFaq = () => faqItems.forEach((item, index) => { item.open = index === 0; });
+  resetFaq();
+  window.addEventListener('pageshow', resetFaq, { once: true });
+  faqItems.forEach(item => item.addEventListener('toggle', () => {
+    if (!item.open) return;
+    faqItems.forEach(other => { if (other !== item) other.open = false; });
+  }));
+
   const amount = estimator?.querySelector('#amount');
   const format = value => Math.round(value).toLocaleString('ja-JP');
   const update = () => {
