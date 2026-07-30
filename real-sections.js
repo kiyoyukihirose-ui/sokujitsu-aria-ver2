@@ -48,23 +48,29 @@
     <div class="fee-copy"><p><strong>即日アリアちゃんなら、</strong><br>振込手数料・事務手数料0円。<br>買取率ピッタリでの振込をお約束します。</p></div>`);
 
   const reasons = [
-    ['▥','法人による運営','即日アリアちゃんは、株式会社Ariaが責任を持って運営するサービスです。'],
-    ['✓','古物商許可取得済み','公安委員会より古物商許可を取得し、法令を遵守して運営しています。','東京都公安委員会 第304362115284号'],
-    ['▣','プライバシーに配慮した運営','ご家族・勤務先へのご連絡や郵送物は一切ありません。お預かりした個人情報は厳重に管理しています。']
+    ['figma-assets/reason-building.svg','法人による運営','即日アリアちゃんは、株式会社Ariaが<br>責任を持って運営するサービスです。'],
+    ['figma-assets/reason-shield.png','古物商許可取得済み','公安委員会より古物商許可を取得し、<br>法令を遵守して運営しています。','東京都公安委員会 第304362115284号'],
+    ['figma-assets/reason-lock.png','プライバシーに配慮した運営','ご家族・勤務先へのご連絡や郵送物は<br>一切ありません。<br>お預かりした個人情報は厳重に管理し<br>ています。']
   ];
   replace('[data-node-id="392:55956"]', `
-    <div class="arrow-heading"><small>はじめての方でも安心</small><strong>アリアちゃんが選ばれる理由</strong></div>
-    <div class="reason-list">${reasons.map(([icon,title,body,note])=>`<article><i>${icon}</i><div><h3>${title}</h3><p>${body}</p>${note?`<small>${note}</small>`:''}</div></article>`).join('')}</div>`);
+    <img class="reason-halftone" src="asset-flow-halftone-sp-left-top.png" alt="">
+    <div class="reason-band"><img src="asset-mobile-title-band.png" alt=""><p><small>はじめての方でも安心</small><strong>アリアちゃんが選ばれる理由</strong></p></div>
+    <div class="reason-cards">${reasons.map(([icon,title,body,note],i)=>`<article class="reason-card reason-card--${i+1}"><img class="reason-icon" src="${icon}" alt=""><div class="reason-text"><h3>${title}</h3><p>${body}</p>${note?`<small>${note}</small>`:''}</div></article>`).join('')}</div>`);
 
   const steps = [
-    ['STEP 1','ご自身でAppleギフトカードを購入','asset-flow-icon-card.png','現物のカード、オンラインカードのどちらでもご利用いただけます。'],
-    ['STEP 2','ギフトコード・必要事項を入力してお申し込み','asset-flow-icon-form.png','ギフトコードと写真付き身分証明書をご用意ください。'],
-    ['STEP 3','確認後、お客様の口座へ買取代金を振込','asset-flow-icon-bag.png','お申し込みから入金まで最短3分で完了します。']
+    ['ご自身で<br>Appleギフトカードを購入','figma-assets/flow-step-1.png','現物のカード・オンラインカードど<br>ちらでもご利用いただけます。'],
+    ['ギフトコード・必要事項を<br>入力してお申し込み','figma-assets/flow-step-2.png','お手元にギフトコード及び、<br>顔付き身分証明証（免許証など）の<br>写真をご用意ください。'],
+    ['ギフトコードの確認後、<br>お客様の口座に買取金を振込み','figma-assets/flow-step-3.png','お申込みから入金まで、最短3分で<br>完了します。※']
   ];
   replace('[data-node-id="456:89585"]', `
-    <div class="arrow-heading"><small>あっという間に振込完了！</small><strong>お申し込みの流れ</strong></div>
-    <div class="step-list">${steps.map(([step,title,img,body],i)=>`<article><b>${step}</b><h3>${title}</h3><img src="${img}" alt=""><p>${body}</p>${i<2?'<span class="step-arrow">▼</span>':''}</article>`).join('')}</div>
-    <a class="orange-cta flow-cta" href="#estimate">お申し込みはこちら <span>››</span></a>`);
+    <img class="flow-dots flow-dots--1" src="asset-flow-halftone-sp-right-top.png" alt="">
+    <img class="flow-dots flow-dots--2" src="asset-flow-halftone-sp-left-top.png" alt="">
+    <img class="flow-dots flow-dots--3" src="asset-flow-halftone-sp-center-bottom.png" alt="">
+    <img class="flow-dots flow-dots--4" src="asset-flow-halftone-sp-right-bottom.png" alt="">
+    <div class="flow-band"><img src="asset-mobile-title-band.png" alt=""><p><small>あっという間に振込完了！</small><strong>お申し込みの流れ</strong></p></div>
+    <div class="flow-cards">${steps.map(([title,img,body],i)=>`<article class="flow-card flow-card--${i+1}"><b class="flow-step">STEP<span>${i+1}</span></b><h3>${title}</h3><img class="flow-illustration" src="${img}" alt=""><p>${body}</p></article>`).join('')}</div>
+    <p class="flow-note">※繁忙期などお申込みが集中した場合は、入金までお時間を<br>いただく場合がございます。</p>
+    <a class="flow-cta-exact" href="#estimate"><img src="asset-cta-mobile-flow.png" alt="お申し込みはこちら"></a>`);
 
   const amount = estimator?.querySelector('#amount');
   const format = value => Math.round(value).toLocaleString('ja-JP');
