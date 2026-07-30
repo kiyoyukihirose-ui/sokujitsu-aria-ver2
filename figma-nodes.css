@@ -239,13 +239,13 @@
 .estimator--figma.estimator--figma{height:810px!important;min-height:810px!important;background:linear-gradient(180deg,#fff8ea 0%,#fcfcfc 6.2%,#cef0ff 100%)!important}
 .estimator--figma:before,.estimator--figma:after{width:210px!important;height:420px!important;background:url("asset-halftone-bottom.png") center/210px 420px no-repeat!important;opacity:.72!important;mask-image:none!important}
 .estimator--figma>.estimator-license{top:2px!important;right:18px!important;width:199px!important;height:20px!important;font-size:10px!important;line-height:20px!important;text-align:right!important}
-.estimator--figma.estimator--figma>.estimate-panel.estimate-panel{left:25px!important;top:91px!important;width:343px!important;height:691px!important;border:5px solid #007ebd!important;border-radius:15px!important;overflow:hidden!important}
+.estimator--figma.estimator--figma>.estimate-panel.estimate-panel{left:25px!important;top:91px!important;width:343px!important;height:691px!important;border:5px solid transparent!important;border-radius:15px!important;overflow:hidden!important;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(180deg,#007ebd 0%,#30b4f5 100%) border-box!important}
 .estimate-panel>h2{left:18px!important;top:32px!important;width:296px!important;height:29px!important;font-family:Inter,"Noto Sans JP",sans-serif!important;font-size:24px!important;font-weight:600!important;line-height:29px!important;color:#079ed8!important}
-.estimate-panel>.estimate-input{left:31px!important;top:94px!important;width:270px!important;height:47px!important;border:2.642px solid #007ebd!important;border-radius:7.927px!important;display:flex!important;align-items:center!important;justify-content:flex-end!important}
+.estimate-panel>.estimate-input{left:31px!important;top:94px!important;width:270px!important;height:47px!important;border:0!important;border-radius:7.927px!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;background:#fff!important}
 .estimate-input>input{flex:0 0 199px!important;width:199px!important;height:35.091px!important;padding:0!important;border:0!important;background:transparent!important;text-align:right!important;font-family:Inter,sans-serif!important;font-size:29.067px!important;font-weight:600!important;line-height:35.091px!important;color:#372200!important}
 .estimate-input>span{flex:0 0 35px!important;width:35px!important;margin:0 7px 0 0!important;text-align:left!important;font-family:Inter,"Noto Sans JP",sans-serif!important;font-size:16.912px!important;font-weight:600!important;line-height:20.052px!important;color:#079ed8!important}
 .estimate-panel>.estimate-lead{left:21px!important;top:141px!important;width:292px!important;height:18px!important;font-family:Inter,"Noto Sans JP",sans-serif!important;font-size:16px!important;font-weight:300!important;line-height:18px!important;color:#00425e!important}
-.estimate-panel>.estimate-result{left:31px!important;width:270px!important;margin:0!important;border-width:2.642px!important;border-radius:7.927px!important}
+.estimate-panel>.estimate-result{left:31px!important;width:270px!important;margin:0!important;border:0!important;border-radius:7.927px!important}
 .estimate-panel>.estimate-result--first{top:189px!important;height:156px!important}.estimate-panel>.estimate-result--repeat{top:357px!important;height:157px!important}
 .estimate-result>span{left:71px!important;top:6px!important;width:122.806px!important;height:31.8px!important;border-radius:25.297px!important;font-family:Inter,"Noto Sans JP",sans-serif!important;font-size:22.997px!important;font-weight:600!important;line-height:31.8px!important}
 .estimate-result>strong{top:59px!important;height:41.1px!important;font-family:Inter,sans-serif!important;font-size:33.824px!important;font-weight:600!important;line-height:41.1px!important}.estimate-result>strong small{font-size:16.912px!important}
@@ -261,7 +261,11 @@
 /* Exact fills and typography for Figma frame 529:20679. */
 .estimate-panel>h2{background:linear-gradient(123.27555deg,#007ebd 4.7042%,#30b4f5 95.2958%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}
 .estimate-input>span{background:linear-gradient(96.39817deg,#007ebd 4.7042%,#30b4f5 95.2958%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}
-.estimate-result--first{border-color:#f5a623!important}.estimate-result--repeat{border-color:#007ebd!important}
+.estimate-result--first,.estimate-result--repeat{background:#fff!important}
+.estimate-panel>.estimate-input:before,.estimate-panel>.estimate-result:before{content:""!important;position:absolute!important;z-index:5!important;inset:0!important;padding:2.64px!important;border-radius:inherit!important;background:var(--estimate-frame-gradient)!important;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;-webkit-mask-composite:xor!important;mask-composite:exclude!important;pointer-events:none!important}
+.estimate-panel>.estimate-input{--estimate-frame-gradient:linear-gradient(180deg,#007ebd 0%,#30b4f5 100%)}
+.estimate-panel>.estimate-result--first{--estimate-frame-gradient:#f5a623}
+.estimate-panel>.estimate-result--repeat{--estimate-frame-gradient:linear-gradient(180deg,#007ebd 0%,#30b4f5 100%)}
 .estimate-result--first>span{background:linear-gradient(103.64944deg,#f5a623 3.6719%,#ff8800 96.3281%)!important}
 .estimate-result--repeat>span{background:linear-gradient(106.94645deg,#007ebd 4.7042%,#30b4f5 95.2958%)!important}
 .estimate-result--first>b{background:linear-gradient(97.15391deg,#f5a623 3.6719%,#ff8800 96.3281%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}
