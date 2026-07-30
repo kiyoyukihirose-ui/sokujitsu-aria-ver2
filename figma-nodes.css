@@ -185,3 +185,24 @@
 
 /* Pixel layout for Figma 392:61394. */
 .footer--figma.footer--figma{position:relative!important;width:393px!important;min-width:393px!important;height:145px!important;margin:0!important;padding:21px 0 0!important;box-sizing:border-box!important;overflow:hidden!important;background:linear-gradient(99.653deg,#f5a623 3.67%,#ff8800 96.328%)!important;color:#372200!important;text-align:center!important;font-family:Inter,"Noto Sans JP","Yu Gothic",sans-serif!important;font-size:12px!important;font-weight:400!important;line-height:15px!important}
+
+/* Semantic text implementation for Figma 392:49556. */
+.hero>.hero__eyebrow{opacity:1!important;font-family:"Zen Kaku Gothic New","Noto Sans JP","Yu Gothic",sans-serif!important;font-weight:700!important;box-shadow:2px 2px 0 #372200!important}
+.hero__eyebrow>p{margin:0!important;padding:0!important;line-height:normal!important;white-space:nowrap!important}.hero__eyebrow>p>span{letter-spacing:-2.7674px!important}
+.hero>.hero__speed{opacity:1!important}
+.hero__speed>.hero__stopwatch{left:31.164px!important;top:25.551px!important;width:33.6375px!important;height:38.8433px!important;transform:rotate(12.91deg)!important;transform-origin:center!important}
+.hero__speed>span{top:35.189px!important;left:68px!important;width:90px!important;font-family:Inter,"Noto Sans JP","Yu Gothic",sans-serif!important;font-size:22.286px!important;font-weight:900!important;line-height:27px!important}
+.hero__speed>strong{top:14.189px!important;left:160px!important;width:126px!important;font-family:Inter,"Noto Sans JP","Yu Gothic",sans-serif!important;font-size:30.837px!important;font-weight:900!important;line-height:53px!important;letter-spacing:-5.2423px!important}
+.hero__speed>strong>b{font-size:44.053px!important;letter-spacing:-6.1674px!important}
+.hero__speed>.hero__speed-line{left:153.48px!important;top:56.95px!important;width:150.619px!important;height:19.284px!important}
+.hero>.current-rate{opacity:1!important}
+.current-rate__grid>div+div{border-left:0!important}.current-rate__grid>div+div:before{content:"";position:absolute;left:0;top:28px;width:1px;height:64px;background:#aebcc2}
+.current-rate strong{left:5px!important;top:19px!important;width:134px!important;background:none!important;color:#ff8800!important}
+.current-rate__grid>div+div strong{left:11.5px!important;top:22px!important;width:123px!important;background:none!important;color:#078ccb!important}
+.current-rate strong{height:87px!important}
+.hero>.hero__proof{opacity:1!important}
+.hero__proof>.proof>small,.hero__proof>.proof>strong,.hero__proof>.proof>b{position:absolute!important;z-index:2!important;display:block!important;margin:0!important;padding:0!important;font-family:Inter,"Noto Sans JP","Yu Gothic",sans-serif!important;text-align:center!important;white-space:nowrap!important}
+.proof--users>small{left:34px!important;top:49px!important;width:84px!important;height:17px!important;font-size:14px!important;font-weight:500!important;line-height:17px!important}.proof--users>strong{left:30px!important;top:67px!important;width:67px!important;height:30px!important;font-size:0!important;line-height:30px!important}.proof--users>strong>i{font-size:28px!important;font-style:normal!important;font-weight:800!important}.proof--users>strong>span{font-size:24px!important;font-weight:800!important}.proof--users>b{left:97px!important;top:76px!important;width:28px!important;height:21px!important;font-size:14px!important;font-weight:700!important;line-height:21px!important}
+.proof--fee>small{left:42.851px!important;top:44px!important;width:70px!important;height:17px!important;font-size:14px!important;font-weight:500!important;line-height:17px!important}.proof--fee>strong{left:38.879px!important;top:62px!important;width:67px!important;height:41px!important;background:none!important;color:#ff9008!important;font-size:28.114px!important;font-weight:800!important;line-height:41px!important;letter-spacing:-2.8114px!important;text-shadow:.586px .586px 1.171px #000!important}.proof--fee>strong>i{font-size:44.514px!important;font-style:normal!important;letter-spacing:-5.7869px!important}
+.proof--license>strong{left:22.702px!important;top:55px!important;width:110px!important;height:27px!important;font-size:22px!important;font-weight:700!important;line-height:27px!important}.proof--license>b{left:44.702px!important;top:82px!important;width:66px!important;height:17px!important;font-size:14px!important;font-weight:500!important;line-height:17px!important}
+.hero>.hero__legal{display:none!important}
