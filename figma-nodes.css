@@ -91,7 +91,7 @@
 .feature--figma-speed.feature--figma-speed{background:linear-gradient(180deg,#cef0ff 0,rgba(206,240,255,0) 60px),linear-gradient(180deg,#fff 0%,#fff7e7 19%,#ffd166 100%)!important}
 .feature--figma-speed>.speed-badge:after{content:"";position:absolute;z-index:2;left:29.2px;top:154.27px;width:159.23px;height:13.22px;background:#f80;box-shadow:0 0 3.306px rgba(0,0,0,.5)}
 .speed-badge>p{z-index:3;text-shadow:0 0 3.306px rgba(0,0,0,.5)!important}.feature--figma-speed>.speed-copy{box-shadow:0 0 30px 14px rgba(255,255,255,.26)!important;backdrop-filter:blur(1px)!important}
-.feature--figma-fee:after{box-shadow:0 0 24px 9px rgba(255,255,255,.32);filter:blur(.35px)}.feature--figma-fee>.fee-zero-art{filter:drop-shadow(0 0 2px rgba(255,255,255,.75)) drop-shadow(0 2px 1px rgba(255,136,0,.24))}
+.feature--figma-fee:after{box-shadow:0 0 24px 9px rgba(255,255,255,.32);filter:blur(.35px)}.feature--figma-fee>.fee-zero-art{filter:none!important}
 
 /* Pixel layout for Figma 392:55956 / 456:89585. */
 .reasons--figma.reasons--figma{position:relative!important;width:393px!important;height:738px!important;margin:0!important;padding:0!important;overflow:hidden!important;background:linear-gradient(180deg,#fff4dc 0%,#fff4dc 58%,#ffe7aa 88%,#ffd166 100%)!important;color:#372200!important}
@@ -241,7 +241,7 @@
 .estimator--figma.estimator--figma{height:810px!important;min-height:810px!important;background:linear-gradient(180deg,#fff8ea 0%,#fcfcfc 6.2%,#cef0ff 100%)!important}
 .estimator--figma:before,.estimator--figma:after{width:210px!important;height:420px!important;background:url("asset-halftone-bottom.png") center/210px 420px no-repeat!important;opacity:.72!important;mask-image:none!important}
 .estimator--figma>.estimator-license{top:2px!important;right:18px!important;width:199px!important;height:20px!important;font-size:10px!important;line-height:20px!important;text-align:right!important}
-.estimator--figma.estimator--figma>.estimate-panel.estimate-panel{left:25px!important;top:91px!important;width:343px!important;height:691px!important;border:5px solid transparent!important;border-radius:15px!important;overflow:hidden!important;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(180deg,#007ebd 0%,#30b4f5 100%) border-box!important}
+.estimator--figma.estimator--figma>.estimate-panel.estimate-panel{left:25px!important;top:91px!important;width:343px!important;height:691px!important;border:5px solid transparent!important;border-radius:15px!important;overflow:hidden!important;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(91.828006969deg,#007ebd 4.7042%,#30b4f5 95.2958%) border-box!important}
 .estimate-panel>h2{left:18px!important;top:32px!important;width:296px!important;height:29px!important;font-family:Inter,"Noto Sans JP",sans-serif!important;font-size:24px!important;font-weight:600!important;line-height:29px!important;color:#079ed8!important}
 .estimate-panel>.estimate-input{left:31px!important;top:94px!important;width:270px!important;height:47px!important;border:0!important;border-radius:7.927px!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;background:#fff!important}
 .estimate-input>input{flex:0 0 199px!important;width:199px!important;height:35.091px!important;padding:0!important;border:0!important;background:transparent!important;text-align:right!important;font-family:Inter,sans-serif!important;font-size:29.067px!important;font-weight:600!important;line-height:35.091px!important;color:#372200!important}
@@ -266,9 +266,9 @@
 .estimate-input>span{background:linear-gradient(96.39817deg,#007ebd 4.7042%,#30b4f5 95.2958%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}
 .estimate-result--first,.estimate-result--repeat{background:#fff!important}
 .estimate-panel>.estimate-input:before,.estimate-panel>.estimate-result:before{content:""!important;position:absolute!important;z-index:5!important;inset:0!important;padding:2.64px!important;border-radius:inherit!important;background:var(--estimate-frame-gradient)!important;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;-webkit-mask-composite:xor!important;mask-composite:exclude!important;pointer-events:none!important}
-.estimate-panel>.estimate-input{--estimate-frame-gradient:linear-gradient(180deg,#007ebd 0%,#30b4f5 100%)}
-.estimate-panel>.estimate-result--first{--estimate-frame-gradient:#f5a623}
-.estimate-panel>.estimate-result--repeat{--estimate-frame-gradient:linear-gradient(180deg,#007ebd 0%,#30b4f5 100%)}
+.estimate-panel>.estimate-input{--estimate-frame-gradient:linear-gradient(110.272323843deg,#007ebd 4.7042%,#30b4f5 95.2958%)}
+.estimate-panel>.estimate-result--first{--estimate-frame-gradient:linear-gradient(96.198959572deg,#f5a623 3.6719%,#ff8800 96.3281%)}
+.estimate-panel>.estimate-result--repeat{--estimate-frame-gradient:linear-gradient(96.309756841deg,#007ebd 4.7042%,#30b4f5 95.2958%)}
 .estimate-result--first>span{background:linear-gradient(103.64944deg,#f5a623 3.6719%,#ff8800 96.3281%)!important}
 .estimate-result--repeat>span{background:linear-gradient(106.94645deg,#007ebd 4.7042%,#30b4f5 95.2958%)!important}
 .estimate-result--first>b{background:linear-gradient(97.15391deg,#f5a623 3.6719%,#ff8800 96.3281%)!important;background-clip:text!important;-webkit-background-clip:text!important;color:transparent!important}

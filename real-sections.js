@@ -53,7 +53,7 @@
     <img class="fee-halftone" data-node-id="529:20756" src="figma-assets/fee-halftone-529-20756.png" alt="">
     <div class="fee-band" data-node-id="529:21781"><img src="figma-assets/fee-band-529-21781.png" alt=""><p><small>買取率ピッタリで入金</small><strong>振込手数料0円</strong></p></div>
     <div class="fee-glow" data-node-id="529:21780"><img src="figma-assets/fee-copy-ellipse-529-21780.svg" alt=""></div>
-    <img class="fee-zero-art" src="asset-fee-zero.png" alt="0円">
+    <img class="fee-zero-art" data-node-id="529:21802" src="figma-assets/fee-zero-art-529-21802.png" alt="0円">
     <div class="fee-copy"><p><strong>即日アリアちゃんなら、</strong><br>振込手数料・事務手数料0円。<br>買取率ピッタリでの振込をお約束します。</p></div>`);
 
   const reasons = [
