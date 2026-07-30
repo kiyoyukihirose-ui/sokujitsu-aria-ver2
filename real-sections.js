@@ -114,13 +114,31 @@
     item.classList.toggle('is-expanded', expanded);
     item.querySelector('.faq-summary').setAttribute('aria-expanded', String(expanded));
   };
-  const resetFaq = () => faqItems.forEach((item, index) => setFaqItem(item, index === 0));
+  const updateFaqLayout = () => {
+    const list = faq?.querySelector('.faq-list');
+    let listHeight = 20 * Math.max(0, faqItems.length - 1);
+    faqItems.forEach((item, index) => {
+      const answer = item.querySelector('.faq-answer');
+      const closedHeight = [1, 4, 6].includes(index) ? 94 : 93;
+      const expandedHeight = Math.ceil(78 + answer.scrollHeight);
+      item.style.setProperty('--faq-expanded-height', `${expandedHeight}px`);
+      listHeight += item.classList.contains('is-expanded') ? expandedHeight : closedHeight;
+    });
+    list?.style.setProperty('--faq-list-height', `${listHeight}px`);
+    faq?.style.setProperty('--faq-section-height', `${118 + listHeight + 83}px`);
+  };
+  const resetFaq = () => {
+    faqItems.forEach((item, index) => setFaqItem(item, index === 0));
+    updateFaqLayout();
+  };
   resetFaq();
   window.addEventListener('pageshow', resetFaq, { once: true });
   faqItems.forEach(item => item.querySelector('.faq-summary').addEventListener('click', () => {
     const shouldExpand = !item.classList.contains('is-expanded');
-    faqItems.forEach(other => setFaqItem(other, shouldExpand && other === item));
+    setFaqItem(item, shouldExpand);
+    updateFaqLayout();
   }));
+  window.addEventListener('resize', updateFaqLayout);
 
   const amount = estimator?.querySelector('#amount');
   const format = value => Math.round(value).toLocaleString('ja-JP');
