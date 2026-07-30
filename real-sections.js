@@ -180,7 +180,7 @@
     <h2 class="company-title">会社概要</h2>
     <dl class="company-table">${companyRows.map(([label, value], index) => `<div class="company-row company-row--${index + 1}"><dt>${label}</dt><dd>${value}</dd></div>`).join('')}</dl>
     <figure class="company-building"><img src="figma-assets/company-building.png" alt="呉羽小野木ビル外観"></figure>
-    <figure class="company-map"><img src="figma-assets/company-map.png" alt="会社所在地の地図"></figure>`);
+    <figure class="company-map"><iframe title="株式会社Aria 所在地マップ" src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%8B%E8%B0%B7%E5%8C%BA%E4%BB%A3%E3%80%85%E6%9C%A82-20-12%20%E5%91%89%E7%BE%BD%E5%B0%8F%E9%87%8E%E6%9C%A8%E3%83%93%E3%83%AB&z=16&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe></figure>`);
 
   const amount = estimator?.querySelector('#amount');
   const estimatePanel = estimator?.querySelector('.estimate-panel');

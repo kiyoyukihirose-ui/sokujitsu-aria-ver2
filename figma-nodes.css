@@ -187,6 +187,7 @@
 .company-building>img{position:absolute!important;left:-.16px!important;top:-40px!important;display:block!important;width:324.32px!important;height:431.48px!important;max-width:none!important;margin:0!important}
 .company--figma>.company-map{position:absolute!important;left:26px!important;top:1069px!important;width:343px!important;height:242px!important;margin:0!important;padding:0!important;overflow:hidden!important;border-radius:7px!important;background:#eee!important;box-shadow:0 0 2px rgba(0,0,0,.25)!important}
 .company-map>img{position:absolute!important;left:-25.83px!important;top:-531.53px!important;display:block!important;width:394.55px!important;height:812.42px!important;max-width:none!important;margin:0!important}
+.company-map>iframe{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;margin:0!important;border:0!important}
 
 /* Pixel layout for Figma 392:61394. */
 .footer--figma.footer--figma{position:relative!important;width:393px!important;min-width:393px!important;height:145px!important;margin:0!important;padding:21px 0 0!important;box-sizing:border-box!important;overflow:hidden!important;background:linear-gradient(99.653deg,#f5a623 3.67%,#ff8800 96.328%)!important;color:#372200!important;text-align:center!important;font-family:Inter,"Noto Sans JP","Yu Gothic",sans-serif!important;font-size:12px!important;font-weight:400!important;line-height:15px!important}
