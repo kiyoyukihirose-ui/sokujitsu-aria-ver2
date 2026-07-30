@@ -337,3 +337,9 @@
 
 /* Flush the centered site canvas to the viewport edges vertically. */
 @media(min-width:394px){body{padding-block:0!important}.site-shell{border-radius:0!important}}
+
+/* Responsive 393px canvas: scale up to a 650px stage, then reveal gradient rails. */
+html,body{min-width:0!important;background:radial-gradient(circle at 50% 35%,#ffde96 0%,#ffae00 100%) fixed!important}
+body{overflow-x:hidden!important}
+.site-stage{position:relative;width:min(100%,650px);margin:0 auto;background:#fff;box-shadow:0 0 30px rgba(0,0,0,.5)}
+.site-stage>.site-shell{width:393px!important;margin:0!important;border-radius:0!important;box-shadow:none!important;transform-origin:top left!important}

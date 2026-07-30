@@ -6,10 +6,11 @@
     <meta name="description" content="Appleギフトカード買取専門店 即日アリアちゃん" />
     <title>即日アリアちゃん</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="figma-nodes.css?v=edge-flush-20" />
+    <link rel="stylesheet" href="figma-nodes.css?v=wide-rails-21" />
   </head>
   <body>
-    <div class="site-shell">
+    <div class="site-stage">
+      <div class="site-shell">
       <header class="site-header" data-node-id="392:61396">
         <div class="figma-logo" data-node-id="392:61397" role="img" aria-label="即日アリアちゃん">
           <img class="figma-logo__combined" src="figma-assets/header-logo.png" alt="" />
@@ -135,19 +136,21 @@
       </main>
 
       <footer class="footer--figma" data-node-id="392:61394">copyright © 2026 株式会社Aria. all rights reserved.</footer>
+      </div>
     </div>
     <script>
       const fitFigmaCanvas = () => {
+        const stage = document.querySelector('.site-stage');
         const shell = document.querySelector('.site-shell');
-        const scale = Math.min(1, window.innerWidth / 393);
+        const scale = stage.clientWidth / 393;
         shell.style.transform = `scale(${scale})`;
         shell.style.transformOrigin = 'top left';
-        document.body.style.height = scale < 1 ? `${shell.scrollHeight * scale}px` : 'auto';
+        stage.style.height = `${shell.scrollHeight * scale}px`;
       };
       fitFigmaCanvas();
       window.addEventListener('resize', fitFigmaCanvas);
       new ResizeObserver(fitFigmaCanvas).observe(document.querySelector('.site-shell'));
     </script>
-    <script src="real-sections.js?v=edge-flush-20"></script>
+    <script src="real-sections.js?v=wide-rails-21"></script>
   </body>
 </html>
