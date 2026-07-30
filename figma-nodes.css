@@ -282,3 +282,11 @@
 .feature--figma-speed>.speed-copy{z-index:1!important;overflow:visible!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;isolation:isolate!important}
 .feature--figma-speed>.speed-copy>.speed-copy-glow{position:absolute!important;z-index:0!important;left:-150px!important;top:-150px!important;width:630px!important;height:450px!important;max-width:none!important;pointer-events:none!important}
 .feature--figma-speed>.speed-copy>p,.feature--figma-speed>.speed-copy>small{position:relative!important;z-index:1!important}
+
+/* Exact decorative assets for Figma nodes 529:20756, 529:21781 and 529:21780. */
+.feature--figma-fee>.fee-halftone{left:170px!important;right:auto!important;top:3.8px!important;width:224px!important;height:339px!important;max-width:none!important;object-fit:fill!important;opacity:1!important}
+.feature--figma-fee>.fee-band{overflow:visible!important}
+.feature--figma-fee>.fee-band>img{width:361px!important;height:86px!important;max-width:none!important;object-fit:fill!important}
+.feature--figma-fee>.fee-glow{position:absolute!important;z-index:1!important;left:49px!important;top:140px!important;width:292px!important;height:123px!important;overflow:visible!important;pointer-events:none!important}
+.feature--figma-fee>.fee-glow>img{position:absolute!important;left:-135px!important;top:-135px!important;width:562px!important;height:393px!important;max-width:none!important}
+.feature--figma-fee:after{content:none!important;display:none!important}
