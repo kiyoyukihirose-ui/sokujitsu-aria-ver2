@@ -7,8 +7,8 @@
 
   const rateSource = document.querySelector('[data-node-id="392:52714"]');
   const readRates = () => ({
-    first: Number(rateSource?.dataset.firstRate) || 90,
-    repeat: Number(rateSource?.dataset.repeatRate) || 87
+    first: Number(rateSource?.dataset.firstRate) || 93,
+    repeat: Number(rateSource?.dataset.repeatRate) || 90
   });
   let rates = readRates();
   const initialAmount = 30000;
@@ -19,8 +19,8 @@
       <h2>見積もり計算</h2>
       <label class="estimate-input"><input id="amount" type="text" inputmode="numeric" value="30,000" autocomplete="off" aria-label="Appleギフトカード額面"><span>円分</span></label>
       <p class="estimate-lead">のAppleギフトカードがある場合</p>
-      <div class="estimate-result estimate-result--first"><span>初回</span><strong id="firstResult">27,000<small>円</small></strong><b id="firstEstimateRate">${rates.first}％</b></div>
-      <div class="estimate-result estimate-result--repeat"><span>2回目以降</span><strong id="repeatResult">26,100<small>円</small></strong><b id="repeatEstimateRate">${rates.repeat}％</b></div>
+      <div class="estimate-result estimate-result--first"><span>初回</span><strong id="firstResult">27,900<small>円</small></strong><b id="firstEstimateRate">${rates.first}％</b></div>
+      <div class="estimate-result estimate-result--repeat"><span>2回目以降</span><strong id="repeatResult">27,000<small>円</small></strong><b id="repeatEstimateRate">${rates.repeat}％</b></div>
       <p class="estimate-copy">をそのままお振込み！<br><strong>振込手数料・事務手数料0円！</strong></p>
       <a class="orange-cta" href="#apply">この金額で申し込む <span>››</span></a>
     </div>`);
